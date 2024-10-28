@@ -1,63 +1,73 @@
-document.addEventListener('DOMContentLoaded', function() {
-        // SLIDESHOW
-        let currentSlide = 0;
-        const slidesContainer = document.querySelector('.slides');
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
+// SLIDESHOW
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize variables
+    let currentSlide = 1;  // Start at the first real slide
+    const slidesContainer = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
 
-        // Clone first and last slides for the infinite loop effect
+    // Ensure we have slides to work with and a container
+    if (slidesContainer && totalSlides > 1) {
+        // Clone first and last slides for seamless looping
         const firstClone = slides[0].cloneNode(true);
         const lastClone = slides[totalSlides - 1].cloneNode(true);
 
-        slidesContainer.appendChild(firstClone);  // Append the first slide clone
-        slidesContainer.insertBefore(lastClone, slides[0]);  // Prepend the last slide clone
+        // Append clones to create an "infinite" effect
+        slidesContainer.appendChild(firstClone);
+        slidesContainer.insertBefore(lastClone, slides[0]);
 
-        // Adjust width to account for the cloned slides
+        // Set container width to accommodate clones
         slidesContainer.style.width = `${(totalSlides + 2) * 100}%`;
 
-        // Function to show a specific slide
+        // Function to display a specific slide
         function showSlide(index) {
-            const totalSlidesWithClones = totalSlides + 2;  // Account for the two cloned slides
+            const totalSlidesWithClones = totalSlides + 2;  // Adjust for cloned slides
 
             if (index >= totalSlidesWithClones) {
-                currentSlide = 1; // Jump back to the first real slide
+                currentSlide = 1; // Reset to first real slide
             } else if (index < 0) {
-                currentSlide = totalSlides; // Jump back to the last real slide
+                currentSlide = totalSlides; // Reset to last real slide
             } else {
                 currentSlide = index;
             }
 
+            // Transition to the current slide
             slidesContainer.style.transition = 'transform 0.5s ease-in-out';
             slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-            // Loop effect (transition without animation to jump instantly)
+            // Seamlessly loop to the first or last real slide
             if (currentSlide === totalSlidesWithClones - 1) {
                 setTimeout(() => {
                     slidesContainer.style.transition = 'none';
-                    slidesContainer.style.transform = `translateX(-100%)`;  // Jump back to first real slide
-                }, 500);  // Delay should match the transition duration
-            }
-
-            if (currentSlide === 0) {
+                    slidesContainer.style.transform = `translateX(-100%)`;
+                }, 500); // Transition time
+            } else if (currentSlide === 0) {
                 setTimeout(() => {
                     slidesContainer.style.transition = 'none';
-                    slidesContainer.style.transform = `translateX(-${totalSlides * 100}%)`;  // Jump back to last real slide
+                    slidesContainer.style.transform = `translateX(-${totalSlides * 100}%)`;
                 }, 500);
             }
         }
 
-        // Function to move between slides
-        function moveSlide(direction) {
+        // Move slides by a direction (-1 or +1)
+        const moveSlide = (direction) => {
             showSlide(currentSlide + direction);
-        }
+        };
 
-        // Initialize the first slide (move to first real slide)
+        // Initialize slideshow by showing the first real slide
         showSlide(1);
 
-        // Assign click events to navigation areas
+        // Event listeners for navigation areas
         const leftArea = document.querySelector('.left-area');
         const rightArea = document.querySelector('.right-area');
 
-        leftArea.addEventListener('click', () => moveSlide(-1));
-        rightArea.addEventListener('click', () => moveSlide(1));
-    });
+        if (leftArea) {
+            leftArea.addEventListener('click', () => moveSlide(-1));
+        }
+        if (rightArea) {
+            rightArea.addEventListener('click', () => moveSlide(1));
+        }
+    } else {
+        console.warn("Slides container or insufficient slides were not found.");
+    }
+});
