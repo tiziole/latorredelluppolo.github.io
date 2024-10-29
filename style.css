@@ -31,9 +31,10 @@
 }
 
 @font-face {
-    font-family: "BDOGrotesk-Regular", sans-serif;
+    font-family: 'BDOGrotesk', sans-serif;
+    
+    src:url('https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/Font/BDOGrotesk-Regular.woff2');
     font-style: normal;
-    src:url("https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/Font/BDOGrotesk-Regular.woff2");
 }
 
 html, body {
@@ -343,7 +344,7 @@ padding-bottom: 40px;
 }
 
 .p-prod{
-font-family: BDOGrotesk-Regular;
+font-family: BDOGrotesk;
     font-size: 38px;
     font-weight: 400;
     line-height: 105%;
