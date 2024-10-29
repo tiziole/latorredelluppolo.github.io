@@ -31,7 +31,7 @@
 }
 
 @font-face {
-    font-family: 'BDOGrotesk', sans-serif;
+    font-family: "BDOGrotesk";
     
     src: url('https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/Font/BDOGrotesk-Regular.woff2'), format("woff2");
     font-style: normal;
