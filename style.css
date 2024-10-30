@@ -32,8 +32,9 @@
 
 @font-face {
     font-family: 'BDOGroteskRegular';
-    src: url("https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/BDOGroteskRegular.woff2"), format("otf");
+    src: url("https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/fonts/BDOGroteskRegular.woff2"), format("otf");
     font-style: normal;
+    
 }
 
 html, body {
