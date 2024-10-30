@@ -33,7 +33,7 @@
 
 @font-face {
     font-family: 'BDOGroteskRegular';
-    src: local('BDOGroteskRegular'),
+   /* src: local('BDOGroteskRegular'),*/
         url('fonts/BDOGroteskRegular.woff2') format("woff2");
     font-style: normal;
     
