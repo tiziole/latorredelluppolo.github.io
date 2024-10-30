@@ -320,6 +320,7 @@ ul.list {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
     /*color: #17322D;*/
@@ -336,6 +337,7 @@ text-align: center;
     font-family: BDOGroteskRegular;
     font-size: 28px;
     font-weight: 400;
+    letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
     /*color: #17322D;*/
@@ -351,6 +353,7 @@ padding-bottom: 40px;
     font-family: BDOGroteskRegular;
     font-size: 38px;
     font-weight: 400;
+    letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
     /*color: #17322D;*/
@@ -363,6 +366,7 @@ padding-bottom: 40px;
 font-family: BDOGroteskRegular;
     font-size: 12px;
     font-weight: 400;
+    letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
     /*color: #17322D;*/
@@ -767,6 +771,7 @@ padding: 10px 0 15px 0;
 font-family: BDOGroteskRegular;
     font-size: 38px;
     font-weight: 400;
+    letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
     /*color: #17322D;*/
@@ -890,7 +895,7 @@ padding-bottom: 10px;
 
 
 /*****************CARD******************/
-.p-r-card{
+.p-r-card {
 margin: 10px 0;
 padding: 0 8px;
 }
