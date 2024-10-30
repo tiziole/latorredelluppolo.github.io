@@ -60,6 +60,7 @@
                         </script>-->
 
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/slideshow.js"></script>
+<script src="https://tiziole.github.io/latorredelluppolo.github.io/emailsize.js"></script>
                         
 <link rel="stylesheet" href="https://tiziole.github.io/latorredelluppolo.github.io/style.css">
 
@@ -245,26 +246,32 @@
                             <p class="p-prod">La Torre Del Luppolo + Tiziole</p>
                             <p class="p-prod">€40</p>
                         </div>
-<div class="prod-form">
-<p class="p-prod">S, M, L, XL, XXL</p>
-</div>
+                        
+                        <div class="sizes prod-form">
+                            <span class="size" onclick="selectSize(this, 'S')">S,</span>
+                            <span class="size" onclick="selectSize(this, 'M')">M,</span>
+                            <span class="size" onclick="selectSize(this, 'L')">L,</span>
+                            <span class="size" onclick="selectSize(this, 'XL')">XL,</span>
+                            <span class="size" onclick="selectSize(this, 'XXL')">XXL</span>
+                        </div>
+                        
                         <div>
                             <p class="discl-shop">Cliccando qui sotto potrai inviarci una mail per prenotare la tua felpa. Puoi scegliere se utilizzare i punti della tua fidelity card oppure acquistarla normalmente effettuando il pagamento tramite paypal.</p>
 <p class="discl-shop">N.B. Il colore delle foto potrebbe differire leggermente da quello reale. </p>
                         </div>
                     </div>
+                    
                 <div class="desktop-add">
-                    <div class="add-prod">
+                    <div class="add-prod" onclick="sendEmail()">
                         <p class="p-prod center">Prenotala ora!</p>
                     </div>
-                </div>
                 </div>
 
             </div> 
 
         </div>    
         <div class="mobile-add">
-                    <div class="add-prod">
+                    <div class="add-prod" onclick="sendEmail()">
                         <p class="p-prod center">Prenotala ora!</p>
                     </div>
         </div>
