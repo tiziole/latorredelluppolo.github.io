@@ -34,6 +34,8 @@
 @font-face {
     font-family: 'BDOGroteskRegular';
    /* src: local('BDOGroteskRegular'),*/
+        url('fonts/BDOGrotesk-Regular.otf') format("opentype"),
+        url('fonts/BDOGrotesk-Regular.ttf') format("truetype"),
         url('fonts/BDOGroteskRegular.woff2') format("woff2");
     font-style: normal;
     
