@@ -315,7 +315,7 @@ ul.list {
     text-rendering: geometricPrecision;
 }
 
-footerlink{
+.footerlink{
     font-family: BDOGroteskRegular;
     font-weight: 400;
     font-style: normal;
@@ -766,7 +766,7 @@ padding: 10px 0 15px 0;
         font-size: 28px;
     }
 
-footerlink{
+.footerlink{
     font-size: 16px;
 }
 
@@ -906,7 +906,7 @@ font-size: 16px;
 font-size: 28px;
 }
 
-footerlink{
+.footerlink{
     font-size: 14px;
 }
     
@@ -1082,7 +1082,7 @@ font-size: 24px;
 font-size: 24px;
 }
 
-footerlink{
+.footerlink{
     font-size: 14px;
 }
     
@@ -1220,7 +1220,7 @@ font-size: 30px;
 font-size: 16px;
 }
 
-footerlink{
+.footerlink{
     font-size: 14px;
 }    
     
@@ -1391,7 +1391,7 @@ font-size: 24px;
 font-size: 16px;
 }
 
-footerlink{
+.footerlink{
     font-size: 14px;
 }
 
