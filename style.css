@@ -315,6 +315,19 @@ ul.list {
     text-rendering: geometricPrecision;
 }
 
+footerlink{
+    font-family: BDOGroteskRegular;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: -.02em;
+    line-height: 105%;
+    color: #000000;
+    /*color: #17322D;*/
+    margin: 0px;
+    text-rendering: geometricPrecision;
+}
+
 .discl{
     font-family: BDOGroteskRegular;
     font-weight: 400;
@@ -746,13 +759,16 @@ padding: 10px 0 15px 0;
     }
 
     .discl{
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .p{
         font-size: 28px;
     }
 
+footerlink{
+    font-size: 16px;
+}
 
 
 .footheard {
@@ -890,6 +906,10 @@ font-size: 16px;
 font-size: 28px;
 }
 
+footerlink{
+    font-size: 14px;
+}
+    
 .footheard {
     font-size: 50px;
     }
@@ -1062,6 +1082,10 @@ font-size: 24px;
 font-size: 24px;
 }
 
+footerlink{
+    font-size: 14px;
+}
+    
 .footheard {
     font-size: 50px;
     }
@@ -1196,6 +1220,10 @@ font-size: 30px;
 font-size: 16px;
 }
 
+footerlink{
+    font-size: 14px;
+}    
+    
 .footheard {
     font-size: 50px;
     }
@@ -1363,7 +1391,9 @@ font-size: 24px;
 font-size: 16px;
 }
 
-
+footerlink{
+    font-size: 14px;
+}
 
 .footheard {
     font-size: 40px;
