@@ -1292,7 +1292,7 @@ background-color: yellow;
 position: sticky;
 bottom: 0px;
 background-color: #fcfaf7;
-        
+z-index: 10;
 }
 
 .add-prod{
