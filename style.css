@@ -30,11 +30,11 @@
     font-style: normal;
 }
 
-@import url('https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/fonts/BDOGroteskRegular.woff2')
 
 @font-face {
     font-family: 'BDOGroteskRegular';
-    src: url("https://github.com/tiziole/latorredelluppolo.github.io/raw/refs/heads/main/fonts/BDOGroteskRegular.woff2"), format("woff2");
+    src: local('BDOGroteskRegular'),
+        url('fonts/BDOGroteskRegular.woff2') format("woff2");
     font-style: normal;
     
 }
