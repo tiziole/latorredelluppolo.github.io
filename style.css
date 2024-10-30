@@ -1418,7 +1418,7 @@ order: -1;
 }
 
 .size {
-    color: #db2725; /* Colore iniziale */
+    color: #000000; /* Colore iniziale */
     cursor: pointer;
     font-family: BDOGroteskRegular;
     font-size: 24px;
@@ -1431,7 +1431,7 @@ order: -1;
 
 /* Stile della taglia selezionata */
 .selectedsize {
-    color: #000000; /* Colore quando selezionato */
+    color: #db2725; /* Colore quando selezionato */
     cursor: pointer;
     font-family: BDOGroteskRegular;
     font-size: 24px;
