@@ -45,7 +45,8 @@ html, body {
     height: 100%;
     max-width: 100%;
     font-size: 16px;
-    background-color: #000000 !important;
+    background-color: #ffffff !important; /*SOLO TEST*/
+    /*background-color: #000000 !important;+/
     
     scroll-behavior: smooth;
 }
