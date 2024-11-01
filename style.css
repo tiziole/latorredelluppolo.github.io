@@ -577,10 +577,10 @@ cursor: pointer;
     background-color: black;
 }
     
-    add-prod > p-prod:hover{
-        color:#fcfaf7;
-    }
+.desktop-add:hover .p-prod {
+    color: blue;
 }
+
 
 /*******SLIDESHOW********/
 .total-cont{
