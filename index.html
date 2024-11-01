@@ -55,7 +55,7 @@
 <!---- HTML DA USARE --->
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/refreshtop.js"></script>
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/slideshow.js"></script>
-<script src="https://tiziole.github.io/latorredelluppolo.github.io/emailreservation1.js"></script>
+<script src="https://tiziole.github.io/latorredelluppolo.github.io/emailreservation2.js"></script>
 <!--<script src="https://tiziole.github.io/latorredelluppolo.github.io/heightcont-ext.js"></script>-->
                         
 <link rel="stylesheet" href="https://tiziole.github.io/latorredelluppolo.github.io/style.css">
@@ -235,33 +235,38 @@
             <div class=" descr col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="cont-descr-prod">
                     <div class="descr-prod">
-                        <div class="prod-form">
-                            <p class="p-prod">Felpa con cappuccio e zip Meteorhop 2.0</p>
-                            <p class="p-prod">Verde con illustrazione a colori</p>
+                        <form class="prod-form">
+                            <label class="p-prod">Felpa con cappuccio e zip Meteorhop 2.0</label>
+                            <label class="p-prod">Verde con illustrazione a colori</label>
                             <p class="p-prod">La Torre Del Luppolo + Tiziole</p>
-                            <p class="p-price">€40</p>
-                        </div>
+                            <label class="p-price">€40</label>
+                        </form>
                         
                         <div class="sizes prod-form">
-                        <span class="size" onclick="selectSize(this, 'S')">S,</span>
-                        <span class="size" onclick="selectSize(this, 'M')">M,</span>
-                        <span class="size" onclick="selectSize(this, 'L')">L,</span>
-                        <span class="size" onclick="selectSize(this, 'XL')">XL,</span>
-                        <span class="size" onclick="selectSize(this, 'XXL')">XXL</span> 
-                    </div>
+                            <span class="size" onclick="selectSize(this, 'S')">S,</span>
+                            <span class="size" onclick="selectSize(this, 'M')">M,</span>
+                            <span class="size" onclick="selectSize(this, 'L')">L,</span>
+                            <span class="size" onclick="selectSize(this, 'XL')">XL,</span>
+                            <span class="size" onclick="selectSize(this, 'XXL')">XXL</span> 
+                        </div>
+                        
+                        <div class="discl-shop">
+                            <input type="checkbox" value="LuppoloCard">
+                            <label for="LuppoloCard">Usa i punti della Luppolo Card</label>
+                        </div>
                         
                         <div>
                         <p class="discl-shop">Cliccando qui sotto potrai inviarci una mail per prenotare la tua felpa. Puoi scegliere se utilizzare i punti della tua fidelity card oppure acquistarla normalmente effettuando il pagamento tramite paypal.</p>
                         <p class="discl-shop">N.B. Il colore delle foto potrebbe differire leggermente da quello reale. </p>
-                    </div>
+                        </div>
                     </div>
                     
                     <div class="desktop-add">
-                    <div class="add-prod" onclick="sendEmail()">
-                        <p class="p-prod center">Prenotala ora!</p>
+                        <div class="add-prod" onclick="sendEmail()">
+                            <p class="p-prod center">Prenotala ora!</p>
+                        </div>
                     </div>
-                </div>
-                </div>
+        </div>
 
             </div> 
 
