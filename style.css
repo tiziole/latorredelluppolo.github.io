@@ -578,7 +578,8 @@ cursor: pointer;
 }
     
 .desktop-add:hover .p-prod {
-    color: blue;
+    color: #fcfaf7;
+    transition: all 200ms ease-in-out;
 }
 
 
