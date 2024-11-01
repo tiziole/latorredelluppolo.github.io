@@ -23,7 +23,7 @@ function selectSize(element, size) {
 
 function sendEmail() {
     // Get the content of <label> elements with classes 'p-prod' and 'p-price' within '.prod-form'
-    const prodFormTexts = Array.from(document.querySelectorAll('.prod-form label.p-prod, .prod-form label.p-price'))
+    const prodFormTexts = Array.from(document.querySelectorAll('.prod-form label.p-prod'))
         .map(label => label.textContent) // Get only the text content of each <label>
         .filter((value, index, self) => self.indexOf(value) === index) // Remove duplicates
         .join(' - '); // Join texts with " - " between them
