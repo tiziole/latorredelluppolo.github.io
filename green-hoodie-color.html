@@ -54,7 +54,7 @@
 <!---- HTML DA USARE --->
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/refreshtop.js"></script>
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/slideshow.js"></script>
-<script src="https://tiziole.github.io/latorredelluppolo.github.io/emailreservation1.js"></script>
+<script src="https://tiziole.github.io/latorredelluppolo.github.io/emailreservation2.js"></script>
 <!--<script src="https://tiziole.github.io/latorredelluppolo.github.io/heightcont-ext.js"></script>-->
                         
 <link rel="stylesheet" href="https://tiziole.github.io/latorredelluppolo.github.io/style.css">
@@ -190,23 +190,109 @@
 </svg>
 </a>
 </header>
+    
+<div class="p-r p-l flow">
+    
+<!---SLIDESHOW-->
+    <div class="total-cont">
+        
+        <div class="cont-ext">
+            
+            
+            
+            <div class="slideshow-container col-lg-8 col-md-8 col-sm-12 col-xs-12">
+    
+                <!-- Aree cliccabili -->
+                <div class="left-area"></div>
+                <div class="right-area"></div>
 
-<div class="p-r p-l">
-<p class="p-t h1 upcase justify" style="border-bottom: 2px solid black;"> Fresh Merch</p>
+        
+                <!-- Immagini dello slideshow -->
+                <div class="slides">
 
-<div class="col-xs12 col-sm-12 col-md-12 col-lg-12 flow" style=" border-bottom: 2px solid black;">
-<div class="col-xs-12 col-md-12 col-lg-4 p-t p-b discl-shop">NOTA BENE <br> Ti ricordiamo che i punti della tua Luppolo Card scadranno il 31/12/24 ma potrai utilizzarli per prenotare la nuova bellissima fiammeggiante felpa (sempre se il tuo saldo copre la soglia dei 50 punti necessari al riscatto del premio)
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0003_Front%20copia.jpg" alt="Slide 1">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0002_Back%20copia.jpg" alt="Slide 2">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0001_ZIP%20HOODIE%20WITH%20MODEL%20copia.jpg" alt="Slide 3">
+                    </div>
+    
+    
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0000_FIX%20THE%20BORDER%20OF%20THE%20TROUSER%20copia.jpg" alt="Slide 4">
+                    </div>
+
+                </div><!-- Immagini dello slideshow -->
+    
+            </div><!-- container -->
+
+            <div class=" descr col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="cont-descr-prod">
+                    <div class="descr-prod">
+                        <form class="prod-form">
+                            <label class="p-prod">Felpa con cappuccio e zip Meteorhop 2.0</label>
+                            <label class="p-prod">Verde con illustrazione a colori</label>
+                            <p class="p-prod">La Torre Del Luppolo + Tiziole</p>
+                            <label class="p-price">€40</label>
+                        </form>
+                        
+                        <div class="sizes prod-form">
+                            <span class="size" onclick="selectSize(this, 'S')">S,</span>
+                            <span class="size" onclick="selectSize(this, 'M')">M,</span>
+                            <span class="size" onclick="selectSize(this, 'L')">L,</span>
+                            <span class="size" onclick="selectSize(this, 'XL')">XL,</span>
+                            <span class="size" onclick="selectSize(this, 'XXL')">XXL</span> 
+                        </div>
+                        
+                        <!--
+                        <div class="discl-shop" style="display: flex; align-items: center">
+                            <input type="checkbox" value="LuppoloCard">
+                            <label for="LuppoloCard">Usa i punti della Luppolo Card</label>
+                        </div>
+                        -->
+                        
+                        <div>
+                        <p class="discl-shop">Cliccando qui sotto potrai inviarci una mail per prenotare la tua felpa specificando se vuoi utilizzare i punti della tua Luppolo Card oppure effettuando un pagamento con Paypal. Trattandosi di una prenotazione, in caso di pagamento con Paypal è richiesto solo un'acconto di 20€, saldando i rimanenti al ritiro della tua felpa in negozio.<br>
+                        All'invio della mail ricordati di inserire Nome, Cognome e il tuo numero di telefono.<br>
+                        La prenotazione è da considerare confermanta solamente se riceverai una mail di risposta da noi.</p>
+                        <p class="discl-shop">N.B. Il colore delle foto potrebbe differire leggermente da quello reale. </p>
+                        </div>
+                    </div>
+                    
+                    <div class="desktop-add">
+                        <div class="add-prod" onclick="sendEmail()">
+                            <p class="p-prod center">Prenotala ora!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="mobile-add">
+            <div class="add-prod" onclick="sendEmail()">
+                <p class="p-prod center">Prenotala ora!</p>
+            </div>
+        </div>
+    </div>
+        
+<div class="related">
+    <p class="discl upcase" style="display: flex; justify-content: center; align-items: center;"> Altri prodotti </p>
 </div>
-</div>
-
 
 <div class="related-wrap">
-    <div class="article">
+    <div class="relatedarticle">
         <div class="inner-wrap">
             <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0002_Back%20copia.jpg');">
                 </div>
+                
                 <p class="discl">Felpa Meteorhop 2.0</p>
                 <p class="discl">Verde</p>
                 <p class="discl">€30</p>
@@ -214,12 +300,12 @@
         </div>
     </div>
     
-    <div class="article">
+    <div class="relatedarticle">
         <div class="inner-wrap">
             <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0002_Back%20copia.jpg');">
                 </div>
+                
                 <p class="discl">Felpa Meteorhop 2.0</p>
                 <p class="discl">Verde</p>
                 <p class="discl">€30</p>
@@ -227,12 +313,12 @@
         </div>
     </div>
     
-    <div class="article">
+    <div class="relatedarticle">
         <div class="inner-wrap">
             <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0002_Back%20copia.jpg');">
                 </div>
+                
                 <p class="discl">Felpa Meteorhop 2.0</p>
                 <p class="discl">Verde</p>
                 <p class="discl">€30</p>
@@ -240,12 +326,12 @@
         </div>
     </div>
     
-    <div class="article">
+    <div class="relatedarticle">
         <div class="inner-wrap">
             <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0002_Back%20copia.jpg');">
                 </div>
+                
                 <p class="discl">Felpa Meteorhop 2.0</p>
                 <p class="discl">Verde</p>
                 <p class="discl">€30</p>
@@ -253,91 +339,22 @@
         </div>
     </div>
     
-    <div class="article">
+    <div class="relatedarticle">
         <div class="inner-wrap">
             <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20color/GREEN_0000s_0002_Back%20copia.jpg');">
                 </div>
+                
                 <p class="discl">Felpa Meteorhop 2.0</p>
                 <p class="discl">Verde</p>
                 <p class="discl">€30</p>
             </a>
         </div>
     </div>
-    
-    <div class="article">
-        <div class="inner-wrap">
-            <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
-                </div>
-                <p class="discl">Felpa Meteorhop 2.0</p>
-                <p class="discl">Verde</p>
-                <p class="discl">€30</p>
-            </a>
-        </div>
-    </div>
-    
-    <div class="article">
-        <div class="inner-wrap">
-            <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
-                </div>
-                <p class="discl">Felpa Meteorhop 2.0</p>
-                <p class="discl">Verde</p>
-                <p class="discl">€30</p>
-            </a>
-        </div>
-    </div>
-    
-    <div class="article">
-        <div class="inner-wrap">
-            <a aria-current="false" href="inserire link pagina">
-                <div class="img-bkg" style="background-image: url('https://github.com/tiziole/latorredelluppolo/blob/main/GREEN_0000s_0002_Back%20copia.jpg?raw=true');">
-
-                </div>
-                <p class="discl">Felpa Meteorhop 2.0</p>
-                <p class="discl">Verde</p>
-                <p class="discl">€30</p>
-            </a>
-        </div>
-    </div>
-</div> 
-    
-<!-------FOOTER--------->
-    <div class="p-t p-r p-l p-b flow">
-
-<div class= p-b>
-<p class="col-lg-12 footheard upcase justify">La Torre del Luppolo</p>
-<p class="col-lg-12 foot upcase justify">estd. 2014</p>
-</div>
-
-<div class="p-t p-b col-lg-12  flow">
-
-<div class="p-b col-xs-12 col-sm-6 col-md-4 col-lg-4 discl ">
-
-<p class="footerlink" style="opacity: 0.4">Get in touch </p>
-
-<ul class="footerlink list">
-<li><a class="pointlink" href="mailto:latorre@latorredelluppolo.it"  target="_blank">latorre@latorredelluppolo.it</a></li>
-</ul>
-
-</div>
-
-<div class="p-b col-xs-12 col-sm-6 col-md-4 col-lg-4 ">
-<p class="footerlink" style="opacity: 0.4">Connect</p>
-
-<ul class="footerlink list">
-<li><a class="pointlink" href="https://www.facebook.com/latorredelluppolo" target="_blank">Facebook</a></li>
-
-<li><a class="pointlink" href="https://www.instagram.com/latorredelluppolo" target="_blank">Instagram</a></li>
-</ul>
-
 </div>
 
 </div>
+    
 <!---- FINE HTML MIO -->
 
                         
