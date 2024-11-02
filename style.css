@@ -376,7 +376,7 @@ ul.list {
     font-family: BDOGroteskRegular;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 22px;
     letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
@@ -820,7 +820,7 @@ padding: 10px 0 15px 0;
     }
 
     .discl{
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .p{
