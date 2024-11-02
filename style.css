@@ -746,8 +746,20 @@ border-bottom: 2px solid black;
 padding: 10px 0 15px 0;
 }
 
+.freshdesktop{
+    width: 300px;
+    height: 100px;
+    background-color:red;
+}
 
-
+.shopheader{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
 /*****************CARD*****************/
 
 .p-r-card {
