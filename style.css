@@ -747,9 +747,18 @@ padding: 10px 0 15px 0;
 }
 
 .freshdesktop{
-    /*width: 300px;
-    height: 100px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100px;
     background-color:red;
+}
+
+.freshdesktop img {
+    width: 100%; /* Makes image responsive to the container */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Prevents cropping */
 }
 
 .shopheader{
