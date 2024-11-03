@@ -755,6 +755,10 @@ padding: 10px 0 15px 0;
     max-width: 25vw;
 }
 
+.freshmobile{
+    display:none;
+}
+
 .shopheader > p{
     width:auto;
 }
@@ -904,6 +908,11 @@ padding: 10px 0 15px 0;
     .freshdesktop{
         display: none;
     }
+    
+    .freshmobile{
+    width: 100%;
+    height:auto;
+}
     
     .shopheader > p{
     width:100%;
