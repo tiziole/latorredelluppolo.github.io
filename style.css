@@ -914,9 +914,16 @@ padding: 10px 0 15px 0;
     }
     
     .freshmobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        height:auto;
 }
+    .freshmobile img {
+        width: 100%;
+        height: 10vh;
+        object-fit: contain;
+    }
     
     .shopheader > p{
         width:100%;
