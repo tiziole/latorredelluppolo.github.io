@@ -755,6 +755,10 @@ padding: 10px 0 15px 0;
     max-width: 25vw;
 }
 
+.freshdsktop > p{
+    width:auto;
+}
+
 .freshdesktop img {
     width: 100%; /* Makes image responsive to the container */
     height: auto; /* Maintains the aspect ratio */
@@ -899,6 +903,10 @@ padding: 10px 0 15px 0;
 
     .freshdesktop{
         display: none;
+    }
+    
+    .freshdsktop > p{
+    width:100%;
     }
 /*******SLIDESHOW*********/
 
