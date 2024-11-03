@@ -905,17 +905,21 @@ padding: 10px 0 15px 0;
         padding:0 16.6%;
     }
 
+    .shopheader{
+        flex-wrap: wrap;
+    }
+    
     .freshdesktop{
         display: none;
     }
     
     .freshmobile{
-    width: 100%;
-    height:auto;
+        width: 100%;
+        height:auto;
 }
     
     .shopheader > p{
-    width:100%;
+        width:100%;
     }
 /*******SLIDESHOW*********/
 
