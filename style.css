@@ -897,6 +897,9 @@ padding: 10px 0 15px 0;
         padding:0 16.6%;
     }
 
+    .freshdesktop{
+        display: none;
+    }
 /*******SLIDESHOW*********/
 
 .p-prod{
