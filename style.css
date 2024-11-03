@@ -747,12 +747,12 @@ padding: 10px 0 15px 0;
 }
 
 .freshdesktop{
+    flex-shrink: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
-    max-width: 100px;
-    background-color:red;
+    max-width: 25vw;
 }
 
 .freshdesktop img {
@@ -763,10 +763,12 @@ padding: 10px 0 15px 0;
 
 .shopheader{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-bottom: 2px solid black;
     justify-content: space-between;
     align-items: baseline;
+    gap: 2vw;
+    white-space: nowrap;
     
 }
 /*****************CARD*****************/
