@@ -755,7 +755,7 @@ padding: 10px 0 15px 0;
     max-width: 25vw;
 }
 
-.freshdesktop > p{
+.shopheader > p{
     width:auto;
 }
 
@@ -905,7 +905,7 @@ padding: 10px 0 15px 0;
         display: none;
     }
     
-    .freshdesktop > p{
+    .shopheader > p{
     width:100%;
     }
 /*******SLIDESHOW*********/
