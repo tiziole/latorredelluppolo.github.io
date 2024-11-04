@@ -2,39 +2,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const slidesContainer = document.querySelector('.slides');
     const slideshowContainer = document.querySelector('.slideshow-container');
     let startX, startY, endX, endY;
+    let startTime, endTime;
     let currentSlide = 1;
 
-    // Swipe threshold (in pixels)
-    const swipeThreshold = 50;
+    const swipeThreshold = 50; // Minimum swipe distance in pixels
+    const timeThreshold = 300; // Maximum time for a swipe (in ms)
 
-    // Touchstart event - record the starting position
     slideshowContainer.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
+        startTime = new Date().getTime(); // Record time at touch start
     });
 
-    // Touchmove event - prevent vertical scroll if swiping horizontally
     slideshowContainer.addEventListener('touchmove', (e) => {
         endX = e.touches[0].clientX;
         endY = e.touches[0].clientY;
 
-        // Prevent scrolling on horizontal swipe
+        // Prevent vertical scroll if horizontal swipe is detected
         if (Math.abs(startX - endX) > Math.abs(startY - endY)) {
             e.preventDefault();
         }
     });
 
-    // Touchend event - calculate swipe distance and direction
     slideshowContainer.addEventListener('touchend', () => {
         const diffX = startX - endX;
+        const diffY = startY - endY;
+        endTime = new Date().getTime();
 
-        if (Math.abs(diffX) > swipeThreshold) {
+        // Calculate swipe time and distance
+        const timeDiff = endTime - startTime;
+
+        // Check if it's a horizontal swipe (distance > threshold and time < threshold)
+        if (Math.abs(diffX) > swipeThreshold && timeDiff < timeThreshold) {
             if (diffX > 0) {
-                // Swipe left, go to next slide
-                moveSlide(1);
+                moveSlide(1); // Swipe left to go to next slide
             } else {
-                // Swipe right, go to previous slide
-                moveSlide(-1);
+                moveSlide(-1); // Swipe right to go to previous slide
             }
         }
     });
