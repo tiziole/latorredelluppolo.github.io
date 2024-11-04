@@ -604,7 +604,7 @@ display: flex;
 
  .slides {
 display: flex;
-transition: transform 0.5s ease;
+transition: transform 0.5s ease-in-out;
 height: 100%;
 flex-basis: 50%;
         }
@@ -1408,7 +1408,7 @@ padding-bottom: 25px;
 
 .slides {
 display: flex;
-transition: transform 0.5s ease;
+transition: transform 0.5s ease-in-out;
 height: 100%;
 flex-basis: 100%;
         }
@@ -1568,7 +1568,7 @@ font-size: 18px;
 /*****************SLIDESHOW******************/
 .slides {
 display: flex;
-transition: transform 0.5s ease;
+transition: transform 0.5s ease-in-out;
 height: 100%;
 flex-basis: 100%;
         }
