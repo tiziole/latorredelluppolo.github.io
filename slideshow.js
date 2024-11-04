@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function jumpToSlide(position) {
-            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+            slidesContainer.style.transition = 'none';
             slidesContainer.style.transform = `translateX(-${position * 100}%)`;
             currentSlide = position;
         }
