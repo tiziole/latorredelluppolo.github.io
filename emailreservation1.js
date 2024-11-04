@@ -30,7 +30,7 @@ function sendEmail() {
     if (selectedSize) {
         // Crea l'oggetto dell'email includendo il testo del prodotto e la taglia selezionata
         const subject = `Prenotazione ${prodFormTexts} - Taglia ${selectedSize}`;
-        const email = "mailto:tuamail@example.com?subject=" + encodeURIComponent(subject);
+        const email = "mailto:latorre@latorredelluppolo.it?subject=" + encodeURIComponent(subject);
         window.location.href = email;
     } else {
         alert("Seleziona una taglia prima di prenotare."); // Mostra alert se non è selezionata
