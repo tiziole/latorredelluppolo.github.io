@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
 
-    // Variables to store swipe positions
+    // Variables for swipe detection
     let startX = 0;
     let endX = 0;
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesContainer.insertBefore(lastClone, slides[0]);
         slidesContainer.style.width = `${(totalSlides + 2) * 100}%`;
 
-        // Function to display the current slide
+        // Show slide function
         function showSlide(index) {
             const totalSlidesWithClones = totalSlides + 2;
             if (index >= totalSlidesWithClones) {
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesContainer.style.transition = 'transform 0.5s ease-in-out';
             slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-            // Reset to start or end without animation when looping
             if (currentSlide === totalSlidesWithClones - 1) {
                 setTimeout(() => {
                     slidesContainer.style.transition = 'none';
@@ -44,33 +43,42 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Move slides left or right
         const moveSlide = (direction) => {
             showSlide(currentSlide + direction);
         };
 
-        // Event listeners for button navigation
+        // Button navigation listeners
         document.querySelector('.left-area').addEventListener('click', () => moveSlide(-1));
         document.querySelector('.right-area').addEventListener('click', () => moveSlide(1));
 
         // Swipe functionality
         slidesContainer.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
+            console.log("Touch start at:", startX); // Debugging
+        });
+
+        slidesContainer.addEventListener('touchmove', (e) => {
+            endX = e.touches[0].clientX;
         });
 
         slidesContainer.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
+            console.log("Touch end at:", endX); // Debugging
             const swipeDistance = startX - endX;
 
-            // Detect swipe left or right based on swipe distance
             if (swipeDistance > 50) {        // Swipe left
+                console.log("Swiped left");
                 moveSlide(1);
             } else if (swipeDistance < -50) { // Swipe right
+                console.log("Swiped right");
                 moveSlide(-1);
             }
+
+            // Reset swipe values
+            startX = 0;
+            endX = 0;
         });
 
-        // Initialize the slideshow at the first visible slide
+        // Initialize the slideshow
         showSlide(1);
     }
 });
