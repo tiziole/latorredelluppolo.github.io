@@ -1,43 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const slidesContainer = document.querySelector('.slideshow-container');
+    const slidesContainer = document.querySelector('.slides');
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    let startX, startY, endX, endY;
+    let currentSlide = 1;
 
-    if (slidesContainer) {
-        let startX = 0;
-        let startY = 0;
-        let isSwiping = false;
+    // Swipe threshold (in pixels)
+    const swipeThreshold = 50;
 
-        slidesContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-            isSwiping = true;
-        });
+    // Touchstart event - record the starting position
+    slideshowContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    });
 
-        slidesContainer.addEventListener('touchmove', (e) => {
-            if (!isSwiping) return;
+    // Touchmove event - prevent vertical scroll if swiping horizontally
+    slideshowContainer.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX;
+        endY = e.touches[0].clientY;
 
-            const currentX = e.touches[0].clientX;
-            const currentY = e.touches[0].clientY;
-            const diffX = startX - currentX;
-            const diffY = startY - currentY;
+        // Prevent scrolling on horizontal swipe
+        if (Math.abs(startX - endX) > Math.abs(startY - endY)) {
+            e.preventDefault();
+        }
+    });
 
-            // Ignore vertical swipes to focus on horizontal swipes only
-            if (Math.abs(diffX) > Math.abs(diffY)) {
-                e.preventDefault();
-                isSwiping = false;
+    // Touchend event - calculate swipe distance and direction
+    slideshowContainer.addEventListener('touchend', () => {
+        const diffX = startX - endX;
 
-                // Swipe threshold of 50px
-                if (diffX > 50) {
-                    // Swipe left
-                    moveSlide(1);  // Go to the next slide
-                } else if (diffX < -50) {
-                    // Swipe right
-                    moveSlide(-1); // Go to the previous slide
-                }
+        if (Math.abs(diffX) > swipeThreshold) {
+            if (diffX > 0) {
+                // Swipe left, go to next slide
+                moveSlide(1);
+            } else {
+                // Swipe right, go to previous slide
+                moveSlide(-1);
             }
-        });
+        }
+    });
 
-        slidesContainer.addEventListener('touchend', () => {
-            isSwiping = false;
-        });
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        currentSlide += direction;
+        
+        // Loop back at the end
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+
+        // Apply the translation
+        slidesContainer.style.transition = 'transform 0.5s ease';
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 });
