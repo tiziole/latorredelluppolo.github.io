@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function moveSlide(direction) {
         currentSlide += direction;
 
-        slidesContainer.style.transition = 'transform 0.5s ease';
+        slidesContainer.style.transition = 'transform 0.5s ease-in-out';
         slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
         // Loop around on reaching cloned slides
