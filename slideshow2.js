@@ -5,53 +5,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalSlides = slides.length;
 
     if (slidesContainer && totalSlides > 1) {
-        // Set initial container width
-        slidesContainer.style.width = `${totalSlides * 100}%`;
+        // Clone first and last slides for smooth looping
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[totalSlides - 1].cloneNode(true);
+
+        // Add clones to the container
+        slidesContainer.appendChild(firstClone);
+        slidesContainer.insertBefore(lastClone, slides[0]);
         
-        // Helper function to move to the specified slide index
-        function showSlide(index) {
-            currentSlide = index;
+        // Adjust container width to fit all slides including clones
+        slidesContainer.style.width = `${(totalSlides + 2) * 100}%`;
+
+        // Set initial position to the first slide
+        slidesContainer.style.transform = `translateX(-${100}%)`;
+
+        function updateSlidePosition() {
             slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-            slidesContainer.style.transform = `translateX(-${(index - 1) * (100 / totalSlides)}%)`;
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
-        // Infinite looping logic with smooth transition
-        const moveSlide = (direction) => {
-            // Update slide index with wrap-around logic
-            if (direction === 1 && currentSlide === totalSlides) {
-                currentSlide = 0;  // Reset index to 0 temporarily
-                slidesContainer.style.transition = 'none'; // Remove transition for seamless loop
-                slidesContainer.style.transform = 'translateX(0%)';
-                
-                // After resetting position, start from first slide again with transition
-                setTimeout(() => {
-                    slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-                    currentSlide = 2; // Move to second slide naturally
-                    slidesContainer.style.transform = `translateX(-${(currentSlide - 1) * (100 / totalSlides)}%)`;
-                }, 20); // Small timeout for the transition to apply correctly
-            } 
-            else if (direction === -1 && currentSlide === 1) {
-                currentSlide = totalSlides + 1;
-                slidesContainer.style.transition = 'none';
-                slidesContainer.style.transform = `translateX(-${(totalSlides - 1) * (100 / totalSlides)}%)`;
+        function jumpToSlide(position) {
+            slidesContainer.style.transition = 'none';
+            slidesContainer.style.transform = `translateX(-${position * 100}%)`;
+            currentSlide = position;
+        }
 
-                setTimeout(() => {
-                    slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-                    currentSlide = totalSlides - 1;
-                    slidesContainer.style.transform = `translateX(-${(currentSlide - 1) * (100 / totalSlides)}%)`;
-                }, 20);
+        function moveToNextSlide() {
+            currentSlide++;
+            updateSlidePosition();
+
+            // When reaching the cloned last slide, jump to the real first slide
+            if (currentSlide === totalSlides + 1) {
+                setTimeout(() => jumpToSlide(1), 500);
             }
-            else {
-                // Regular movement between slides
-                showSlide(currentSlide + direction);
+        }
+
+        function moveToPreviousSlide() {
+            currentSlide--;
+            updateSlidePosition();
+
+            // When reaching the cloned first slide, jump to the real last slide
+            if (currentSlide === 0) {
+                setTimeout(() => jumpToSlide(totalSlides), 500);
             }
-        };
+        }
 
-        // Set up click events for navigation
-        document.querySelector('.left-area').addEventListener('click', () => moveSlide(-1));
-        document.querySelector('.right-area').addEventListener('click', () => moveSlide(1));
+        // Event listeners for navigation areas
+        document.querySelector('.left-area').addEventListener('click', moveToPreviousSlide);
+        document.querySelector('.right-area').addEventListener('click', moveToNextSlide);
 
-        // Initialize slideshow at the first real slide
-        showSlide(1);
+        // Initialize with the first slide
+        updateSlidePosition();
     }
 });
