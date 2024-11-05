@@ -641,13 +641,13 @@ object-fit: cover;
         .left-area {
             left: 0;
             cursor: url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/prev.png") 0 12, auto;
-      cursor: -webkit-image-set(url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/prev.png") 1x, url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/prev.png") 2x) 0 12, auto;
+      /*cursor: -webkit-image-set(url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/prev.png") 1x, url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/prev.png") 2x) 0 12, auto;*/
         }
 
         .right-area {
             right: 0;
             cursor: url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 0 12, auto;
-      cursor: -webkit-image-set(url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 1x, url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 2x) 0 12, auto;
+      /*cursor: -webkit-image-set(url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 1x, url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 2x) 0 12, auto;*/
         }
 
 .cont-descr-prod{
