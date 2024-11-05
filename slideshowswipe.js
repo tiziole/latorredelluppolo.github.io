@@ -1,15 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slidesContainer = document.querySelector('.slides');
+    const slideshowContainer = document.querySelector('.slideshow-container');
     const totalSlides = document.querySelectorAll('.slide').length;
-    let currentSlide = 1; // Start at the first actual slide
+    let currentSlide = 1; // Iniziare con la prima slide
+    let startX, endX;
 
-    // Clone the first and last slides for infinite looping
+    // Clonare la prima e l'ultima slide per il loop infinito
     const firstClone = slidesContainer.firstElementChild.cloneNode(true);
     const lastClone = slidesContainer.lastElementChild.cloneNode(true);
     slidesContainer.appendChild(firstClone);
     slidesContainer.insertBefore(lastClone, slidesContainer.firstElementChild);
 
-    // Set the initial position to the first slide
+    // Imposta la posizione iniziale
     slidesContainer.style.transform = `translateX(-${100}%)`;
 
     function moveSlide(direction) {
@@ -18,56 +20,44 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesContainer.style.transition = 'transform 0.5s ease-in-out';
         slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-        // Loop around on reaching cloned slides
+        // Loop alle slide clonate
         if (currentSlide === 0) {
             setTimeout(() => {
                 slidesContainer.style.transition = 'none';
-                currentSlide = totalSlides; // Reset to the last actual slide
+                currentSlide = totalSlides; // Ripristina l'ultima slide reale
                 slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
             }, 500);
         } else if (currentSlide === totalSlides + 1) {
             setTimeout(() => {
                 slidesContainer.style.transition = 'none';
-                currentSlide = 1; // Reset to the first actual slide
+                currentSlide = 1; // Ripristina la prima slide reale
                 slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
             }, 500);
         }
     }
 
-    // Event listeners for left and right area navigation
+    // Event listeners per le aree di navigazione
     document.querySelector('.left-area').addEventListener('click', () => moveSlide(-1));
     document.querySelector('.right-area').addEventListener('click', () => moveSlide(1));
 
-    // Touch events for swipe gestures
-    let startX, endX;
-    const swipeThreshold = 50; // Minimum swipe distance in pixels
-
-    slidesContainer.addEventListener('touchstart', (e) => {
+    // Gestione degli eventi touch per lo swipe
+    slideshowContainer.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
-        slidesContainer.style.transition = 'none'; // Disable transition during swipe
     });
 
-    slidesContainer.addEventListener('touchmove', (e) => {
+    slideshowContainer.addEventListener('touchmove', (e) => {
         endX = e.touches[0].clientX;
-        const diffX = startX - endX;
-        // Move the slides as the user swipes
-        slidesContainer.style.transform = `translateX(-${currentSlide * 100 - (diffX / window.innerWidth) * 100}%)`;
     });
 
-    slidesContainer.addEventListener('touchend', () => {
+    slideshowContainer.addEventListener('touchend', () => {
         const diffX = startX - endX;
 
-        // If swipe is greater than the threshold, move the slide
-        if (Math.abs(diffX) > swipeThreshold) {
+        if (Math.abs(diffX) > 50) { // Soglia di swipe
             if (diffX > 0) {
-                moveSlide(1); // Swipe left to go to the next slide
+                moveSlide(1); // Swipe sinistra per andare alla slide successiva
             } else {
-                moveSlide(-1); // Swipe right to go to the previous slide
+                moveSlide(-1); // Swipe destra per andare alla slide precedente
             }
-        } else {
-            // If not swiped far enough, return to original position
-            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
     });
 });
