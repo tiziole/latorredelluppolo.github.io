@@ -41,6 +41,27 @@
     
 }
 
+.thumbnails-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumbnail.active {
+    border-color: white;
+}
+
+
 html, body {
     height: 100%;
     max-width: 100%;
@@ -649,15 +670,31 @@ object-fit: cover;
       /*cursor: -webkit-image-set(url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 1x, url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 2x) 0 12, auto;*/
         }
 
-indicator-container{
-    display:none;
-}
-.indictor{
-    display:none;
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    position: absolute;
+    /* z-index: 10; */
+    bottom: 30px;
+    margin-left: 5px;
+    width: calc(100% - 10px);
+    gap: 20px;
 }
 
-.indicator.active{
-    display: none;
+.indicator {
+    width: 20px;
+    height: 20px;
+    /* margin: 0 5px; */
+    border: 2px solid #fcfaf7;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #fcfaf7;
 }
 
 .cont-descr-prod{
@@ -1349,32 +1386,6 @@ padding-bottom: 25px;
     text-rendering: geometricPrecision;
 }
     
-.indicator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 10px; */
-    position: absolute;
-    /* z-index: 10; */
-    bottom: 30px;
-    margin-left: 5px;
-    width: calc(100% - 10px);
-    gap: 20px;
-}
-
-.indicator {
-    width: 20px;
-    height: 20px;
-    /* margin: 0 5px; */
-    border: 2px solid #fcfaf7;
-    border-radius: 50%;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-.indicator.active {
-    background-color: #fcfaf7;
-}
 /*******************************/
 
 /*****************CARD******************/
