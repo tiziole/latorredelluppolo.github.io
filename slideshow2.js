@@ -1,55 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let currentSlide = 1;
     const slidesContainer = document.querySelector('.slides');
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let currentSlide = 1; // Start at the first actual slide
 
-    if (slidesContainer && totalSlides > 1) {
-        const firstClone = slides[0].cloneNode(true);
-        const lastClone = slides[totalSlides - 1].cloneNode(true);
+    // Clone the first and last slides for infinite looping
+    const firstClone = slidesContainer.firstElementChild.cloneNode(true);
+    const lastClone = slidesContainer.lastElementChild.cloneNode(true);
+    slidesContainer.appendChild(firstClone);
+    slidesContainer.insertBefore(lastClone, slidesContainer.firstElementChild);
 
-        slidesContainer.appendChild(firstClone);
-        slidesContainer.insertBefore(lastClone, slides[0]);
-        slidesContainer.style.width = `${(totalSlides + 2) * 100}%`;
+    // Set the initial position to the first slide
+    slidesContainer.style.transform = `translateX(-${100}%)`;
 
-        function showSlide(index) {
-            const totalSlidesWithClones = totalSlides + 2;
-            if (index >= totalSlidesWithClones) {
-                currentSlide = 1;
-            } else if (index < 0) {
-                currentSlide = totalSlides;
-            } else {
-                currentSlide = index;
-            }
+    function moveSlide(direction) {
+        currentSlide += direction;
 
-            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-            if (currentSlide === totalSlidesWithClones - 1) {
-                setTimeout(() => {
-                    slidesContainer.style.transition = 'none';
-                    slidesContainer.style.transform = `translateX(-100%)`;
-                }, 500);
-            } else if (currentSlide === 0) {
-                setTimeout(() => {
-                    slidesContainer.style.transition = 'none';
-                    slidesContainer.style.transform = `translateX(-${totalSlides * 100}%)`;
-                }, 500);
-            }
+        // Loop around on reaching cloned slides
+        if (currentSlide === 0) {
+            setTimeout(() => {
+                slidesContainer.style.transition = 'none';
+                currentSlide = totalSlides; // Reset to the last actual slide
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }, 500);
+        } else if (currentSlide === totalSlides + 1) {
+            setTimeout(() => {
+                slidesContainer.style.transition = 'none';
+                currentSlide = 1; // Reset to the first actual slide
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }, 500);
         }
-
-        const moveSlide = (direction) => {
-            showSlide(currentSlide + direction);
-        };
-
-        // Set up event listeners on navigation areas
-        document.querySelector('.left-area').addEventListener('click', () => moveSlide(-1));
-        document.querySelector('.right-area').addEventListener('click', () => moveSlide(1));
-
-        showSlide(1); // Initialize the slideshow
     }
+
+    // Event listeners for left and right area navigation
+    document.querySelector('.left-area').addEventListener('click', () => moveSlide(-1));
+    document.querySelector('.right-area').addEventListener('click', () => moveSlide(1));
 });
-
-
-
-
