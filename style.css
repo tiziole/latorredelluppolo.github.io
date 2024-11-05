@@ -606,6 +606,10 @@ cursor: pointer;
 }
 
 /*******SLIDESHOW********/
+
+.thumbnails-container{
+    display: none;
+}
 .total-cont{
 padding-bottom: 50px;
 }
