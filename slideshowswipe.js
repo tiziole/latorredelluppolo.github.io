@@ -44,21 +44,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     slidesContainer.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
+        slidesContainer.style.transition = 'none'; // Disable transition during swipe
     });
 
     slidesContainer.addEventListener('touchmove', (e) => {
         endX = e.touches[0].clientX;
+        const diffX = startX - endX;
+        // Move the slides as the user swipes
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100 - (diffX / window.innerWidth) * 100}%)`;
     });
 
     slidesContainer.addEventListener('touchend', () => {
         const diffX = startX - endX;
 
+        // If swipe is greater than the threshold, move the slide
         if (Math.abs(diffX) > swipeThreshold) {
             if (diffX > 0) {
                 moveSlide(1); // Swipe left to go to the next slide
             } else {
                 moveSlide(-1); // Swipe right to go to the previous slide
             }
+        } else {
+            // If not swiped far enough, return to original position
+            slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
     });
 });
