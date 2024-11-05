@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.left-area').addEventListener('click', () => moveSlide(-1));
     document.querySelector('.right-area').addEventListener('click', () => moveSlide(1));
 
-    // Swipe functionality for touch devices
+    // Touch events for swipe gestures
     let startX, endX;
     const swipeThreshold = 50; // Minimum swipe distance in pixels
 
