@@ -607,9 +607,8 @@ cursor: pointer;
 
 /*******SLIDESHOW********/
 
-.thumbnails-container{
-    display: none;
-}
+
+
 .total-cont{
 padding-bottom: 50px;
 }
@@ -1220,6 +1219,10 @@ font-size: 100px;
 
 /*****************FOR MOBILE******************/
 @media (max-width: 767px) {
+
+    .thumbnails-container{
+        display: none;
+    }
 
 .line {
   height: 1px;}
