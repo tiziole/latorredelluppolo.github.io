@@ -1465,6 +1465,7 @@ border-bottom: 2px solid;
 .slideshow-container{
 width: calc(100% + 10px);
 padding-top:10px;
+    overflow: hidden;
 }
 
 
