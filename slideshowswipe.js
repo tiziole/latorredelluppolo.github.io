@@ -15,24 +15,21 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesContainer.style.transform = `translateX(-${100}%)`;
 
     function moveSlide(direction) {
+        // Calcolare il nuovo indice slide
         currentSlide += direction;
 
-        slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Loop alle slide clonate
+        // Controllo per le slide clonate
         if (currentSlide === 0) {
-            setTimeout(() => {
-                slidesContainer.style.transition = 'none';
-                currentSlide = totalSlides; // Ripristina l'ultima slide reale
-                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }, 500);
+            currentSlide = totalSlides; // Ripristina l'ultima slide reale
+            slidesContainer.style.transition = 'none'; // Disabilita la transizione
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`; // Riposizionare immediatamente
         } else if (currentSlide === totalSlides + 1) {
-            setTimeout(() => {
-                slidesContainer.style.transition = 'none';
-                currentSlide = 1; // Ripristina la prima slide reale
-                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }, 500);
+            currentSlide = 1; // Ripristina la prima slide reale
+            slidesContainer.style.transition = 'none'; // Disabilita la transizione
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`; // Riposizionare immediatamente
+        } else {
+            slidesContainer.style.transition = 'transform 0.5s ease-in-out'; // Riabilita la transizione
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
     }
 
@@ -52,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slideshowContainer.addEventListener('touchend', () => {
         const diffX = startX - endX;
 
+        // Gestire lo swipe solo se c'è un movimento significativo
         if (Math.abs(diffX) > 50) { // Soglia di swipe
             if (diffX > 0) {
                 moveSlide(1); // Swipe sinistra per andare alla slide successiva
