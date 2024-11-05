@@ -44,17 +44,19 @@
 .thumbnails-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-right: 10px;
 }
 
 .thumbnail {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border: 2px solid transparent;
     cursor: pointer;
     transition: border-color 0.3s;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
 }
 
 .thumbnail.active {
@@ -676,7 +678,7 @@ object-fit: cover;
     align-items: center;
     /* margin-top: 10px; */
     position: absolute;
-    /* z-index: 10; */
+    z-index: 10;
     bottom: 30px;
     margin-left: 5px;
     width: calc(100% - 10px);
