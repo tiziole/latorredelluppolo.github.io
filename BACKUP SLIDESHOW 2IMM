@@ -1,0 +1,36 @@
+<div class="slideshow-container col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                
+                <!-- Aree cliccabili -->
+                <div class="left-area"></div>
+                <div class="right-area"></div>
+                
+                <div class="indicator-container">
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                
+                <!-- Immagini dello slideshow -->
+                <div class="slides">
+
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/black%20color/SHOP_0002s_0002_black%20front.jpg" alt="Slide 1">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/black%20color/SHOP_0002s_0004_back%20back.jpg" alt="Slide 2">
+                    </div>
+            
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/black%20color/SHOP_0002s_0001_model%20black%20back.jpg" alt="Slide 3">
+                    </div>
+    
+    
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/black%20color/SHOP_0002s_0000_model%20black%20back.jpg">
+                    </div>
+
+                </div><!-- Immagini dello slideshow -->
+                        
+            </div><!-- container -->
