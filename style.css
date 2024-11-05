@@ -52,14 +52,14 @@
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 50%;
     background-color: transparent;
     transition: background-color 0.3s ease;
 }
 
 .indicator.active {
-    background-color: white;
+    background-color: black;
 }
 
 
