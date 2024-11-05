@@ -41,41 +41,12 @@
     
 }
 
-.indicator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 10px; */
-    position: absolute;
-    /* z-index: 10; */
-    bottom: 30px;
-    margin-left: 5px;
-    width: calc(100% - 10px);
-    gap: 20px;
-}
-
-.indicator {
-    width: 20px;
-    height: 20px;
-    /* margin: 0 5px; */
-    border: 2px solid #fcfaf7;
-    border-radius: 50%;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-.indicator.active {
-    background-color: #fcfaf7;
-}
-
-
 html, body {
     height: 100%;
     max-width: 100%;
     font-size: 16px;
     background-color: #fcfaf7 !important; /*SOLO TEST*/
     /*background-color: #000000 !important;*/
-    
     scroll-behavior: smooth;
 }
 
@@ -677,6 +648,17 @@ object-fit: cover;
             cursor: url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 0 12, auto;
       /*cursor: -webkit-image-set(url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 1x, url("https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/cursor/next.png") 2x) 0 12, auto;*/
         }
+
+indicator-container{
+    display:none;
+}
+.indictor{
+    display:none;
+}
+
+.indicator.active{
+    display: none;
+}
 
 .cont-descr-prod{
         display: -webkit-box;
@@ -1365,6 +1347,33 @@ padding-bottom: 25px;
     line-height: 105%;
     margin: 0px;
     text-rendering: geometricPrecision;
+}
+    
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    position: absolute;
+    /* z-index: 10; */
+    bottom: 30px;
+    margin-left: 5px;
+    width: calc(100% - 10px);
+    gap: 20px;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    /* margin: 0 5px; */
+    border: 2px solid #fcfaf7;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #fcfaf7;
 }
 /*******************************/
 
