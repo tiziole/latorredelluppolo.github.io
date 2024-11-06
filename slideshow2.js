@@ -24,12 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSlidePosition();
     }
 
-    // Click events for non-touch devices
-    if (!('ontouchstart' in window)) {
-        document.querySelector('.left-area').addEventListener('click', () => moveSlide('prev'));
-        document.querySelector('.right-area').addEventListener('click', () => moveSlide('next'));
-    }
-
     // Touch events for swipe functionality on touch devices
     if ('ontouchstart' in window) {
         let startX = 0;
@@ -55,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
+    } else {
+        // Click events for non-touch devices
+        document.querySelector('.left-area').addEventListener('click', () => moveSlide('prev'));
+        document.querySelector('.right-area').addEventListener('click', () => moveSlide('next'));
     }
 
     // Initial setup to show the first slide and update indicators
