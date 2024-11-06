@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
     let startX, endX;
 
-    // Function to show or hide areas based on device type
+    // Adjust display based on device type
     function adjustDisplay() {
         if ('ontouchstart' in window || navigator.maxTouchPoints) {
             // Hide left and right areas for touch devices
@@ -25,18 +25,28 @@ document.addEventListener("DOMContentLoaded", function() {
     function enableSwipe() {
         slideshowContainer.addEventListener('touchstart', function(event) {
             startX = event.touches[0].clientX;
+            endX = startX;  // Initialize endX to startX at start of swipe
         });
 
         slideshowContainer.addEventListener('touchmove', function(event) {
-            endX = event.touches[0].clientX;
+            endX = event.touches[0].clientX;  // Update endX as the touch moves
         });
 
         slideshowContainer.addEventListener('touchend', function() {
-            if (startX > endX + 50) {
-                nextSlide(); // Swipe left
-            } else if (startX < endX - 50) {
-                previousSlide(); // Swipe right
+            const diffX = startX - endX;  // Calculate swipe distance
+
+            // Check if swipe distance exceeds threshold
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    nextSlide(); // Swipe left
+                } else {
+                    previousSlide(); // Swipe right
+                }
             }
+
+            // Reset startX and endX to avoid interference with future swipes
+            startX = 0;
+            endX = 0;
         });
     }
 
@@ -49,16 +59,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to show the next slide
     function nextSlide() {
         slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % slides.length;
+        currentIndex = Math.min(currentIndex + 1, slides.length - 1);  // Go to next if available
         slides[currentIndex].classList.add('active');
     }
 
     // Function to show the previous slide
     function previousSlide() {
         slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        currentIndex = Math.max(currentIndex - 1, 0);  // Go to previous if available
         slides[currentIndex].classList.add('active');
     }
 
-    adjustDisplay();
+    adjustDisplay();  // Initial check to configure swipe or click
 });
