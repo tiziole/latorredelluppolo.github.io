@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const leftArea = document.querySelector('.left-area');
     const rightArea = document.querySelector('.right-area');
     const slides = document.querySelectorAll('.slide');
+    const slideshowContainer = document.querySelector('.slideshow-container');
     let currentIndex = 0;
+    let startX, endX;
 
     // Function to show or hide areas based on device type
     function adjustDisplay() {
@@ -21,23 +23,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Enable swipe functionality for touch devices
     function enableSwipe() {
-        let startX, endX;
-        
-        const slidesContainer = document.querySelector('.slides');
-
-        slidesContainer.addEventListener('touchstart', function(event) {
+        slideshowContainer.addEventListener('touchstart', function(event) {
             startX = event.touches[0].clientX;
         });
 
-        slidesContainer.addEventListener('touchmove', function(event) {
+        slideshowContainer.addEventListener('touchmove', function(event) {
             endX = event.touches[0].clientX;
         });
 
-        slidesContainer.addEventListener('touchend', function() {
+        slideshowContainer.addEventListener('touchend', function() {
             if (startX > endX + 50) {
-                nextSlide();
+                nextSlide(); // Swipe left
             } else if (startX < endX - 50) {
-                previousSlide();
+                previousSlide(); // Swipe right
             }
         });
     }
