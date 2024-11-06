@@ -735,11 +735,11 @@ border-top: 2px solid black;
     }
     
 .slideshow-container{
-order: 1;
+/*order: 1;*/
 }
 
 .descr{
-order: 2;
+/*order: 2;*/
 }
 
 .img_prod{
@@ -1120,11 +1120,11 @@ width: calc(100% - 5px);
 }
 
 .descr{
-order: -1;
+/*order: -1;*/
 }
 
 .slideshow-container{
-order: 1;
+/*order: 1;*/
 }
 
 .discl-shop{
@@ -1331,7 +1331,7 @@ width: calc(100% - 5px);
     }
 
 .descr{
-order: -1;
+/*order: -1;*/
 }
 
 .discl-shop{
@@ -1339,7 +1339,7 @@ order: -1;
 }
 
 .slideshow-container{
-order: 1;
+/*order: 1;*/
 }
 
 .desktop-add{
@@ -1563,11 +1563,11 @@ width: calc(100% - 5px);
     }
 
 .descr{
-order: -1;
+/*order: -1;*/
 }
 
 .slideshow-container{
-order: 1;
+/*order: 1;*/
 }
 
 /*****************CARD******************/
@@ -1676,7 +1676,7 @@ padding-left: 5px;
     width: calc(100% - 5px);}
 
 .descr{
-order: -1;
+/*order: -1;*/
 }
 
 .size {
@@ -1705,7 +1705,7 @@ order: -1;
 }    
     
 .slideshow-container{
-order: 1;
+/*order: 1;*/
 }
 
 .desktop-add{
