@@ -150,7 +150,7 @@ margin: 0px !important;
 }
 
 label{
-    font-weight: 400 !important;
+    font-weight: 400;
     margin: 0 !important;
     }
 
@@ -997,7 +997,7 @@ padding: 10px 0 15px 0;
 .p-prod{
 font-family: BDOGroteskRegular;
     font-size: 38px;
-    font-weight: 400;
+    font-weight: 400 !important;
     letter-spacing: -.02em;
     line-height: 105%;
     color: #000000;
