@@ -1,72 +1,66 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    const slidesContainer = document.querySelector('.slides');
-    const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.indicator');
+document.addEventListener("DOMContentLoaded", function() {
     const leftArea = document.querySelector('.left-area');
     const rightArea = document.querySelector('.right-area');
-    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
 
-    function updateSlidePosition() {
-        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-        updateIndicators();
-    }
-
-    function updateIndicators() {
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentSlide);
-        });
-    }
-
-    function moveSlide(direction) {
-        if (direction === 'next' && currentSlide < slides.length - 1) {
-            currentSlide++;
-        } else if (direction === 'prev' && currentSlide > 0) {
-            currentSlide--;
+    // Function to show or hide areas based on device type
+    function adjustDisplay() {
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            // Hide left and right areas for touch devices
+            leftArea.style.display = 'none';
+            rightArea.style.display = 'none';
+            enableSwipe();
+        } else {
+            // Show left and right areas for desktop devices
+            leftArea.style.display = 'block';
+            rightArea.style.display = 'block';
+            enableClickNavigation();
         }
-        updateSlidePosition();
     }
 
-    // Check for touch support
-    if ('ontouchstart' in window) {
-        // Hide left-area and right-area for touch devices
-        leftArea.style.display = 'none';
-        rightArea.style.display = 'none';
+    // Enable swipe functionality for touch devices
+    function enableSwipe() {
+        let startX, endX;
+        
+        const slidesContainer = document.querySelector('.slides');
 
-        let startX = 0;
-        let endX = 0;
-        const swipeThreshold = 50; // Minimum swipe distance in pixels
-
-        slidesContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            endX = startX; // Initialize endX to startX at the beginning of each swipe
+        slidesContainer.addEventListener('touchstart', function(event) {
+            startX = event.touches[0].clientX;
         });
 
-        slidesContainer.addEventListener('touchmove', (e) => {
-            endX = e.touches[0].clientX; // Update endX as touch moves
+        slidesContainer.addEventListener('touchmove', function(event) {
+            endX = event.touches[0].clientX;
         });
 
-        slidesContainer.addEventListener('touchend', () => {
-            const diffX = startX - endX;
-
-            // Reset startX and endX to prevent interference in subsequent swipes
-            startX = 0;
-            endX = 0;
-
-            if (Math.abs(diffX) > swipeThreshold) {
-                if (diffX > 0) {
-                    moveSlide('next'); // Swipe left to go to the next slide
-                } else {
-                    moveSlide('prev'); // Swipe right to go to the previous slide
-                }
+        slidesContainer.addEventListener('touchend', function() {
+            if (startX > endX + 50) {
+                nextSlide();
+            } else if (startX < endX - 50) {
+                previousSlide();
             }
         });
-    } else {
-        // Non-touch devices: click events for left and right areas
-        leftArea.addEventListener('click', () => moveSlide('prev'));
-        rightArea.addEventListener('click', () => moveSlide('next'));
     }
 
-    // Initial setup to show the first slide and update indicators
-    updateSlidePosition();
+    // Enable click navigation for desktop devices
+    function enableClickNavigation() {
+        leftArea.addEventListener('click', previousSlide);
+        rightArea.addEventListener('click', nextSlide);
+    }
+
+    // Function to show the next slide
+    function nextSlide() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    // Function to show the previous slide
+    function previousSlide() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    adjustDisplay();
 });
