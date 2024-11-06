@@ -20,7 +20,7 @@
     font-style: normal;
 }
 
-@font.face {
+@font-face {
     font-family: "magno-sans-variable", sans-serif;
     font-weight: 100 900,
 }
@@ -481,10 +481,10 @@ padding-bottom: 40px;
 
 .discl-shop{
 font-family: BDOGroteskRegular;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: -.02em;
-    line-height: 105%;
+    line-height: 110%;
     color: #000000;
     /*color: #17322D;*/
     margin: 0px;
@@ -1467,11 +1467,12 @@ font-size: 24px;
 } 
     
 .prod-form{
-padding-bottom: 25px;
+    padding-bottom: 25px;
 
 }
 
 .discl-shop{
+    font-size: 12px;
     padding-bottom: 10px;
 }
 
