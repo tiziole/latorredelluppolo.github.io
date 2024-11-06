@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const slideshowContainer = document.querySelector('.slideshow-container');
     const slidesContainer = document.querySelector('.slides');
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
+    const leftArea = document.querySelector('.left-area');
+    const rightArea = document.querySelector('.right-area');
     let currentSlide = 0;
 
     function updateSlidePosition() {
@@ -24,8 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSlidePosition();
     }
 
-    // Touch events for swipe functionality on touch devices
+    // Check for touch support
     if ('ontouchstart' in window) {
+        // Hide left-area and right-area for touch devices
+        leftArea.style.display = 'none';
+        rightArea.style.display = 'none';
+
         let startX = 0;
         let endX = 0;
         const swipeThreshold = 50; // Minimum swipe distance in pixels
@@ -50,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     } else {
-        // Click events for non-touch devices
-        document.querySelector('.left-area').addEventListener('click', () => moveSlide('prev'));
-        document.querySelector('.right-area').addEventListener('click', () => moveSlide('next'));
+        // Non-touch devices: click events for left and right areas
+        leftArea.addEventListener('click', () => moveSlide('prev'));
+        rightArea.addEventListener('click', () => moveSlide('next'));
     }
 
     // Initial setup to show the first slide and update indicators
