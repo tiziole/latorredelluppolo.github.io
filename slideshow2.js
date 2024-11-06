@@ -1,41 +1,54 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function () {
+    const slidesContainer = document.querySelector('.slides');
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
     const leftArea = document.querySelector('.left-area');
     const rightArea = document.querySelector('.right-area');
-    const slides = document.querySelectorAll('.slide');
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    let currentIndex = 0;
-    let startX, endX;
+    let currentSlide = 0;
+    let startX = 0;
+    let endX = 0;
 
-    // Adjust display based on device type
-    function adjustDisplay() {
-        if ('ontouchstart' in window || navigator.maxTouchPoints) {
-            // Hide left and right areas for touch devices
-            leftArea.style.display = 'none';
-            rightArea.style.display = 'none';
-            enableSwipe();
-        } else {
-            // Show left and right areas for desktop devices
-            leftArea.style.display = 'block';
-            rightArea.style.display = 'block';
-            enableClickNavigation();
+    function updateSlidePosition() {
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateIndicators();
+    }
+
+    function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            updateSlidePosition();
         }
     }
 
-    // Enable swipe functionality for touch devices
+    function previousSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlidePosition();
+        }
+    }
+
     function enableSwipe() {
-        slideshowContainer.addEventListener('touchstart', function(event) {
+        slideshowContainer.addEventListener('touchstart', function (event) {
             startX = event.touches[0].clientX;
-            endX = startX;  // Initialize endX to startX at start of swipe
         });
 
-        slideshowContainer.addEventListener('touchmove', function(event) {
-            endX = event.touches[0].clientX;  // Update endX as the touch moves
+        slideshowContainer.addEventListener('touchmove', function (event) {
+            endX = event.touches[0].clientX;
         });
 
-        slideshowContainer.addEventListener('touchend', function() {
-            const diffX = startX - endX;  // Calculate swipe distance
-
-            // Check if swipe distance exceeds threshold
+        slideshowContainer.addEventListener('touchend', function () {
+            const diffX = startX - endX;
             if (Math.abs(diffX) > 50) {
                 if (diffX > 0) {
                     nextSlide(); // Swipe left
@@ -43,32 +56,27 @@ document.addEventListener("DOMContentLoaded", function() {
                     previousSlide(); // Swipe right
                 }
             }
-
-            // Reset startX and endX to avoid interference with future swipes
             startX = 0;
             endX = 0;
         });
     }
 
-    // Enable click navigation for desktop devices
     function enableClickNavigation() {
         leftArea.addEventListener('click', previousSlide);
         rightArea.addEventListener('click', nextSlide);
     }
 
-    // Function to show the next slide
-    function nextSlide() {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = Math.min(currentIndex + 1, slides.length - 1);  // Go to next if available
-        slides[currentIndex].classList.add('active');
+    // Detect touchscreen and adjust display and functionality
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        // Hide click areas for touch devices
+        leftArea.style.display = 'none';
+        rightArea.style.display = 'none';
+        enableSwipe();
+    } else {
+        // Enable click navigation for non-touch devices
+        enableClickNavigation();
     }
 
-    // Function to show the previous slide
-    function previousSlide() {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = Math.max(currentIndex - 1, 0);  // Go to previous if available
-        slides[currentIndex].classList.add('active');
-    }
-
-    adjustDisplay();  // Initial check to configure swipe or click
+    // Initial setup
+    updateSlidePosition();
 });
