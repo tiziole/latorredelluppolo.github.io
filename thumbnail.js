@@ -42,22 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    document.querySelector('.left-area').addEventListener('click', () => {
-        // Move to the previous slide if possible
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateSlidePosition();
-        }
-    });
-
-    document.querySelector('.right-area').addEventListener('click', () => {
-        // Move to the next slide if possible
-        if (currentSlide < slides.length - 1) {
-            currentSlide++;
-            updateSlidePosition();
-        }
-    });
-
     // Initial setup to show the first slide and update indicators and thumbnails
     updateSlidePosition();
 });
