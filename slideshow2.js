@@ -39,14 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         slidesContainer.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
+            endX = startX; // Initialize endX to startX at the beginning of each swipe
         });
 
         slidesContainer.addEventListener('touchmove', (e) => {
-            endX = e.touches[0].clientX;
+            endX = e.touches[0].clientX; // Update endX as touch moves
         });
 
         slidesContainer.addEventListener('touchend', () => {
             const diffX = startX - endX;
+
+            // Reset startX and endX to prevent interference in subsequent swipes
+            startX = 0;
+            endX = 0;
 
             if (Math.abs(diffX) > swipeThreshold) {
                 if (diffX > 0) {
