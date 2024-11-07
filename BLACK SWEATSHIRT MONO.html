@@ -53,11 +53,9 @@
 
 <!---- HTML DA USARE --->
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/refreshtop.js"></script>
-<script src="https://tiziole.github.io/latorredelluppolo.github.io/slideshow.js"></script>
 <script src="https://tiziole.github.io/latorredelluppolo.github.io/emailreservation2.js"></script>
-
-
-<!--<script src="https://tiziole.github.io/latorredelluppolo.github.io/heightcont-ext.js"></script>-->
+<script src="https://tiziole.github.io/latorredelluppolo.github.io/slideshow.js"></script>
+<script src="https://tiziole.github.io/latorredelluppolo.github.io/thumbnail.js"></script>
                         
 <link rel="stylesheet" href="https://tiziole.github.io/latorredelluppolo.github.io/style.css">
 
@@ -196,85 +194,91 @@
 <div class="p-r p-l flow">
     
 <!---SLIDESHOW-->
-    <div class="total-cont">
+<div class="total-cont">
         
-        <div class="cont-ext">
-            
-            
-            
-            <div class="slideshow-container col-lg-8 col-md-8 col-sm-12 col-xs-12">
-    
-                <!-- Aree cliccabili -->
-                <div class="left-area"></div>
-                <div class="right-area"></div>
-
+    <div class="cont-ext">
         
-                <!-- Immagini dello slideshow -->
-                <div class="slides">
+        <div class="cont-gallery col-lg-6 col-md-6 col-sm-6 col-xs-12"">
+        <!-- Thumbnails Container -->
+            <div class="thumbnails-container col-lg-1 col-md-1">
+                <!-- Thumbnail images for each slide (will be filled dynamically) -->
+            </div>
+        
+            <div class="col-lg-7 col-md-10 col-sm-10 col-xs-12">
+                <div class="slideshow-container">
+                    <!-- Aree cliccabili -->
+                    <div class="left-area"></div>
+                    <div class="right-area"></div>
 
-                    <div class="slide">
-                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/black%20mono/shop_0008_black%20mono.jpg" alt="Slide 1">
+                    <!-- Indicator for current slide position-->
+                    <div class="indicator-container">
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
                     </div>
-            
-                    <div class="slide">
-                        <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/black%20mono/shop_0003_model%20hoodie%20green%20color.jpg" alt="Slide 2">
-                    </div>
 
-                </div><!-- Immagini dello slideshow -->
-    
-            </div><!-- container -->
+                    <!-- Main Slides Container -->
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/black%20mono/shop_0008_black%20mono.jpg" alt="Slide 1">
+                        </div>
+                
+                        <div class="slide">
+                            <img src="https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/black%20mono/shop_0003_model%20hoodie%20green%20color.jpg" alt="Slide 2">
+                        </div>
+                    </div><!-- Main Slides Container -->
+                </div>
+            </div><!-- Slideshow Container -->
+        </div>
 
-            <div class=" descr col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="cont-descr-prod">
-                    <div class="descr-prod">
-                        <!-- FORM SWEATSHIRT NERA MONO -->
-                        <form class="prod-form">
-                            <label class="p-prod">Felpa girocollo Meteorhop 2.0</label>
-                            <label class="p-prod">Nera con illustrazione monocolore</label>
-                            <p class="p-prod">La Torre Del Luppolo + Tiziole</p>
-                            <label class="p-price">€40</label>
-                        </form>
-                        
-                        <div class="sizes prod-form">
-                            <span class="size" onclick="selectSize(this, 'S')">S,</span>
-                            <span class="size" onclick="selectSize(this, 'M')">M,</span>
-                            <span class="size" onclick="selectSize(this, 'L')">L,</span>
-                            <span class="size" onclick="selectSize(this, 'XL')">XL,</span>
-                            <span class="size" onclick="selectSize(this, 'XXL')">XXL</span>
-                            <span class="size" onclick="selectSize(this, 'XXXL')">XXXL</span>
-                        </div>
-                        
-                        <!--
-                        <div class="discl-shop" style="display: flex; align-items: center">
-                            <input type="checkbox" value="LuppoloCard">
-                            <label for="LuppoloCard">Usa i punti della Luppolo Card</label>
-                        </div>
-                        -->
-                        
-                        <div>
-                        <p class="discl-shop">Cliccando qui sotto potrai inviarci una mail per prenotare la felpa specificando se vuoi utilizzare i punti della Luppolo Card oppure pagando in denaro.<br> 
-                        Trattandosi di una prenotazione, in caso di pagamento in soldi, chiediamo un'acconto di 20€ a felpa su Paypal (paypal.me/latorredelluppolo) specificando nella causale ‘PRENOTAZIONE FELPA TORRE’  e saldando il resto al ritiro in negozio.<br>All'invio della mail ricordati di inserire NOME, COGNOME e CELLULARE.<br>La prenotazione è da considerarsi confermanta SOLAMENTE se riceverai una mail di risposta da noi.</p>
-                        <p class="discl-shop">N.B. Il colore delle foto potrebbe differire leggermente da quello reale. </p>
-                        </div>
+        <div class=" descr col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="cont-descr-prod col-lg-8 col-md-10 col-sm-10 col-xs-12">
+                <div class="descr-prod">
+                    <!-- FORM HOODIE NERA COLORI -->
+                    <form class="prod-form">
+                        <label id="01" class="item" style=" display:flex; border-bottom: 2px solid black;">FELPA No.08</label>
+                        <label class="p-prod">Nera girocollo</label>
+                        <label class="p-prod"> Meteorhop 2.0 monocromatico</label>
+                        <p class="p-prod">La Torre Del Luppolo + Tiziole</p>
+                        <label class="p-price">€40</label>
+                    </form>
+                    
+                    
+                    <div class="sizes prod-form">
+                        <span class="size" onclick="selectSize(this, 'S')">S,</span>
+                        <span class="size" onclick="selectSize(this, 'M')">M,</span>
+                        <span class="size" onclick="selectSize(this, 'L')">L,</span>
+                        <span class="size" onclick="selectSize(this, 'XL')">XL,</span>
+                        <span class="size" onclick="selectSize(this, 'XXL')">XXL,</span>
+                        <span class="size" onclick="selectSize(this, 'XXXL')">XXXL</span> 
                     </div>
                     
-                    <div class="desktop-add">
-                        <div class="add-prod" onclick="sendEmail()">
-                            <p class="p-prod center">Prenotala ora!</p>
-                        </div>
+                    <div>
+                        <p class="discl-shop">Cliccando sul tasto "Prenotala ora!" o inviandoci una mail all'indirizzo latorre@latorredelluppolo.it potrai prenotare la felpa specificando se vuoi utilizzare i punti della Luppolo Card oppure pagando in denaro.<br> 
+                            Trattandosi di una prenotazione, in caso di pagamento in soldi, chiediamo un'acconto di 20€ a felpa su <a href="https://www.paypal.com/paypalme/latorredelluppolo" target="_blank" style="text-decoration: underline;">PAYPAL</a> specificando nella causale ‘PRENOTAZIONE FELPA TORRE’ e saldando il resto al ritiro in negozio.<br>
+                            All'invio della mail ricordati di inserire NOME, COGNOME, CELLULARE, MODELLO e TAGLIA.<br>La prenotazione è da considerarsi confermanta SOLAMENTE se riceverai una mail di risposta da noi.</p>
+                        <p class="discl-shop">N.B. Il colore delle foto potrebbe differire leggermente da quello reale. </p>
                     </div>
                 </div>
-
+                
+                <div class="desktop-add">
+                    <div class="add-prod" onclick="sendEmail()">
+                        <p class="p-prod center">Prenotala ora!</p>
+                    </div>
+                </div>
             </div>
 
         </div>
-        
-        <div class="mobile-add">
-            <div class="add-prod" onclick="sendEmail()">
-                <p class="p-prod center">Prenotala ora!</p>
-            </div>
+
+    </div>
+    
+    <div class="mobile-add">
+        <div class="add-prod" onclick="sendEmail()">
+            <p class="p-prod center">Prenotala ora!</p>
         </div>
     </div>
+</div>
         
 <div class="related">
     <p class="discl upcase" style="display: flex; justify-content: center; align-items: center;"> Altri prodotti </p>
@@ -283,57 +287,62 @@
 <div class="related-wrap">
     <div class="relatedarticle">
         <div class="inner-wrap">
-    <a aria-current="false" href="https://vqui.it/w/5LUzKwDW">
-        <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/black%20color/shop_0006_black%20color.jpg');"></div>
-        <p class="discl">Felpa girocollo Meteorhop 2.0</p>
-        <p class="discl">Nera con illustrazione a colori</p>
-        <p class="discl">€40</p>
-    </a>
-</div>
+            <a aria-current="false" href="https://vqui.it/w/5LUzKwDW">
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/black%20color/shop_0006_black%20color.jpg');"></div>
+                    <p class="discl">Felpa No.04</p>
+                    <p class="discl">Nera girocollo</p>
+                    <p class="discl">Meteorhop 2.0 a colori</p>
+                    <p class="discl">€40</p>
+            </a>
+        </div>
     </div>
     
     <div class="relatedarticle">
         <div class="inner-wrap">
-    <a aria-current="false" href="https://vqui.it/w/I1ePnILb">
-        <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/green%20mono/shop_0007_green%20mono.jpg');"></div>
-        <p class="discl">Felpa girocollo Meteorhop 2.0</p>
-        <p class="discl">Verde con illustrazione monocolore</p>
-        <p class="discl">€40</p>
-    </a>
-</div>
+            <a aria-current="false" href="https://vqui.it/w/I1ePnILb">
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/green%20mono/shop_0007_green%20mono.jpg');"></div>
+                    <p class="discl">Felpa No.06</p>
+                    <p class="discl">Verde girocollo</p>
+                    <p class="discl">Meteorhop 2.0 monocromatico</p>
+                    <p class="discl">€40</p>
+            </a>
+        </div>
     </div>
     
     <div class="relatedarticle">
         <div class="inner-wrap">
-    <a aria-current="false" href="https://vqui.it/w/DYEuRFBx">
-        <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/grey%20color/shop_0005_grey%20color.jpg');"></div>
-        <p class="discl">Felpa girocollo Meteorhop 2.0</p>
-        <p class="discl">Grigia con illustrazione a colori</p>
-        <p class="discl">€40</p>
-    </a>
-</div>
+            <a aria-current="false" href="https://vqui.it/w/DYEuRFBx">
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/SWEATSHIRT/grey%20color/shop_0005_grey%20color.jpg');"></div>
+                    <p class="discl">Felpa No.02</p>
+                    <p class="discl">Grigia girocollo</p>
+                    <p class="discl">Meteorhop 2.0 a colori</p>
+                    <p class="discl">€40</p>
+            </a>
+        </div>
     </div>
     
     <div class="relatedarticle">
         <div class="inner-wrap">
-    <a aria-current="false" href="https://vqui.it/w/nSCFc3Ex">
-        <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/black%20mono/hoodie__0000s_0004_black%20mono%20back.jpg');"></div>
-        <p class="discl">Felpa con cappuccio e zip Meteorhop 2.0</p>
-        <p class="discl">Nera con illustrazione monocolore</p>
-        <p class="discl">€45</p>
-    </a>
-</div>
+            <a aria-current="false" href="https://vqui.it/w/nSCFc3Ex">
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/black%20mono/hoodie__0000s_0004_black%20mono%20back.jpg');"></div>
+                        <p class="discl">Felpa No.05</p>
+                        <p class="discl">Nera cappuccio e zip</p>
+                        <p class="discl">Meteorhop 2.0 monocromatico</p>
+                        <p class="discl">€45</p>
+            </a>
+        </div>
     </div>
     
     <div class="relatedarticle">
         <div class="inner-wrap">
-    <a aria-current="false" href="https://vqui.it/w/keQYkD1G">
-        <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20mono/hoodie__0000s_0001_green%20mono%20back.jpg');"></div>
-        <p class="discl">Felpa con cappuccio e zip Meteorhop 2.0</p>
-        <p class="discl">Verde con illustrazione monocolore</p>
-        <p class="discl">€45</p>
-    </a>
-</div>
+            <a aria-current="false" href="https://vqui.it/w/keQYkD1G">
+                <div class="img-bkg" style="background-image: url('https://raw.githubusercontent.com/tiziole/latorredelluppolo.github.io/refs/heads/main/img/HOODIE/green%20mono/hoodie__0000s_0001_green%20mono%20back.jpg');"></div>
+                    <p class="discl">Felpa No.07</p>
+                    <p class="discl">Verde cappuccio e zip</p>
+                    <p class="discl">Meteorhop 2.0 monocromatico</p>
+                    <p class="discl">€45</p>
+            </a>
+        </div>
     </div>
 </div>
 
