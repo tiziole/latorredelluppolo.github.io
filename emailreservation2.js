@@ -22,16 +22,26 @@ function selectSize(element, size) {
 }
 
 function sendEmail() {
-    // Get the content of <label> elements with classes 'p-prod' and 'p-price' within '.prod-form'
+    // Retrieve the text content of <label> with class 'item' inside '.prod-form'
+    const itemText = document.querySelector('.prod-form label.item')?.textContent || '';
+
+    // Retrieve the content of <label> elements with class 'p-prod' within '.prod-form'
     const prodFormTexts = Array.from(document.querySelectorAll('.prod-form label.p-prod'))
         .map(label => label.textContent) // Get only the text content of each <label>
         .filter((value, index, self) => self.indexOf(value) === index) // Remove duplicates
         .join(' - '); // Join texts with " - " between them
 
     if (selectedSize) {
-        // Create the email subject with product text and selected size
-        const subject = `Prenotazione ${prodFormTexts} - Taglia ${selectedSize}`;
-        const email = "mailto:latorre@latorredelluppolo.it?subject=" + encodeURIComponent(subject);
+        // Construct the email subject using the item text and product details
+        const subject = `Prenotazione ${itemText} - ${prodFormTexts} - Taglia ${selectedSize}`;
+
+        // Define the email body with additional instructions
+        const body = "Inserisci qui il tuo Nome, Cognome, numero di cellulare, modello e taglia della felpa che vuoi prenotare";
+
+        // Construct the mailto URL with both subject and body
+        const email = `mailto:latorre@latorredelluppolo.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Redirect to the constructed mailto URL
         window.location.href = email;
     } else {
         alert("Seleziona una taglia prima di prenotare."); // Show alert if size is not selected

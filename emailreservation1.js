@@ -1,38 +1,39 @@
-let selectedSize = null; // Variabile per tenere traccia della taglia selezionata
+let selectedSize = null; // Variable to track selected size
 
 function selectSize(element, size) {
     if (element.classList.contains('selectedsize')) {
-        // Deseleziona se già selezionato
+        // Deselect if already selected
         element.classList.remove('selectedsize');
         element.classList.add('size');
-        selectedSize = null; // Imposta a null per il messaggio dell'email
+        selectedSize = null; // Set to null for the email subject
     } else {
-        // Rimuove la classe 'selectedsize' da tutte le taglie
+        // Remove 'selectedsize' from all sizes
         const sizes = document.querySelectorAll('.selectedsize');
         sizes.forEach(el => {
             el.classList.remove('selectedsize');
             el.classList.add('size');
         });
 
-        // Cambia la classe dell'elemento selezionato
+        // Change the class of the selected element
         element.classList.remove('size');
         element.classList.add('selectedsize');
-        selectedSize = size; // Aggiorna la taglia selezionata
+        selectedSize = size; // Update the selected size
     }
 }
 
 function sendEmail() {
-    // Ottieni il contenuto di tutti i <p> con classe 'p-prod' all'interno di 'prod-form'
-    const prodFormTexts = Array.from(document.querySelectorAll('.prod-form .p-prod'))
-        .map(p => p.textContent) // Prendi solo il testo di ciascun <p>
-        .join(' - '); // Unisci i testi con " - " tra di loro
+    // Get the content of <label> elements with classes 'p-prod' and 'p-price' within '.prod-form'
+    const prodFormTexts = Array.from(document.querySelectorAll('.prod-form label.p-prod'))
+        .map(label => label.textContent) // Get only the text content of each <label>
+        .filter((value, index, self) => self.indexOf(value) === index) // Remove duplicates
+        .join(' - '); // Join texts with " - " between them
 
     if (selectedSize) {
-        // Crea l'oggetto dell'email includendo il testo del prodotto e la taglia selezionata
+        // Create the email subject with product text and selected size
         const subject = `Prenotazione ${prodFormTexts} - Taglia ${selectedSize}`;
         const email = "mailto:latorre@latorredelluppolo.it?subject=" + encodeURIComponent(subject);
         window.location.href = email;
     } else {
-        alert("Seleziona una taglia prima di prenotare."); // Mostra alert se non è selezionata
+        alert("Seleziona una taglia prima di prenotare."); // Show alert if size is not selected
     }
 }
