@@ -81,7 +81,6 @@
     /*padding-top: 5.5625rem;*/ 
     margin: 0px;
     text-rendering: geometricPrecision;
-
 }
 
 html, body {
@@ -920,6 +919,8 @@ display: none;
 
 @media (max-width: 1199px){
 
+    
+
 /*************TYPE****************/
     .h1{
         font-size: 275px;
@@ -1012,7 +1013,7 @@ display: none;
 
 .p-prod{
 font-family: BDOGroteskRegular;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400 !important;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1025,7 +1026,7 @@ font-family: BDOGroteskRegular;
 
     .p-price{
         font-family: BDOGroteskRegular;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1040,7 +1041,7 @@ font-family: BDOGroteskRegular;
     color: #000000; /* Colore iniziale */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1053,18 +1054,19 @@ font-family: BDOGroteskRegular;
     color: #db2725; /* Colore quando selezionato */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
     margin: 0px;
     text-rendering: geometricPrecision;
 }
-    
-.cont-ext{
-min-height: 645px;
+   
+.item{
+    font-family: rama-gothic-m;
+    font-weight: 700;
+    font-size: 60px;
 }
-
 /********************************/
 
 /*****************CARD******************/
