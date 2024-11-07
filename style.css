@@ -1010,6 +1010,9 @@ display: none;
         width:100%;
     }
 /*******SLIDESHOW*********/
+.discl-shop{
+    font-size:14px;
+}
 
 .p-prod{
 font-family: BDOGroteskRegular;
@@ -1165,7 +1168,7 @@ padding-bottom: 10px;
     color: #000000; /* Colore iniziale */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1178,7 +1181,7 @@ padding-bottom: 10px;
     color: #db2725; /* Colore quando selezionato */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1377,7 +1380,7 @@ padding-bottom: 25px;
     color: #000000; /* Colore iniziale */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1390,7 +1393,7 @@ padding-bottom: 25px;
     color: #db2725; /* Colore quando selezionato */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1510,7 +1513,7 @@ padding-bottom: 10px;
     color: #000000; /* Colore iniziale */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1523,7 +1526,7 @@ padding-bottom: 10px;
     color: #db2725; /* Colore quando selezionato */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1659,7 +1662,7 @@ padding-bottom: 10px;
     color: #000000; /* Colore iniziale */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
@@ -1672,7 +1675,7 @@ padding-bottom: 10px;
     color: #db2725; /* Colore quando selezionato */
     cursor: pointer;
     font-family: BDOGroteskRegular;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 105%;
