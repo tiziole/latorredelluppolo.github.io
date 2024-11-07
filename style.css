@@ -69,6 +69,18 @@
     border-color: white;
 }
 
+.item{
+    font-family: rama-gothic-m;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 85%;
+    color: #000000;
+    /*color: #17322D;*/
+    /*padding-top: 5.5625rem;*/ 
+    margin: 0px;
+    text-rendering: geometricPrecision;
+
+}
 
 html, body {
     height: 100%;

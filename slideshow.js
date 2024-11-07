@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const indicators = document.querySelectorAll('.indicator');
     const leftArea = document.querySelector('.left-area');
     const rightArea = document.querySelector('.right-area');
+    const thumbnailcontainer = document.querySelector('.thumbnails-container');
     let currentSlide = 0;
     let startX = 0;
     let endX = 0;
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Hide click areas for touch devices
         leftArea.style.display = 'none';
         rightArea.style.display = 'none';
+        thumbnailcontainer.style.display="none";
         enableSwipe();
     } else {
         // Enable click navigation for non-touch devices
