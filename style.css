@@ -1539,17 +1539,17 @@ display: none;
 
 .mobile-add{
 display: block;
-background-color: yellow;
 position: sticky;
-bottom: 0px;
-background-color: #fcfaf7;
+bottom: 20px;
 z-index: 10;
 }
 
 .add-prod{
-border-top: 2px solid black;
-border-bottom: 2px solid black;
-padding: 10px 0 15px 0;
+    border: 2px solid #db2725;
+    padding: 10px 0 15px 0;
+    background-color: #db2725;
+    border-radius: 999px;    
+    padding: 10px 0 15px 0;
 }
 
 /*****************CARD******************/
