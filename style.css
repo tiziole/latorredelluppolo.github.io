@@ -41,6 +41,12 @@
     
 }
 
+.cont-gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
 .thumbnails-container {
     display: flex;
     flex-direction: column;
@@ -594,13 +600,12 @@ cursor: pointer;
 .add-prod:hover {
     text-decoration: none;
     transition: all 200ms ease-in-out;
-    border: 2px solid black;
-    border-radius: 50px;
+    
     background-color: black;
 }
     
 .desktop-add:hover .p-prod {
-    color: #fcfaf7;
+    color: #db2725;
     transition: all 200ms ease-in-out;
 }
 }
@@ -703,19 +708,19 @@ object-fit: cover;
 }
 
 .cont-descr-prod{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        overflow: hidden;
-        position: relative;
-        height: 100%;
-margin-left: 5px;
-    width: calc(100% - 10px);
-    }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    /*margin-left: 5px;*/
+    /*width: calc(100% - 10px);*/
+}
     
     .descr-prod{
         display: -webkit-box;
@@ -729,9 +734,6 @@ margin-left: 5px;
         -ms-flex-direction: column;
         flex-direction: column;
         overflow: hidden;
-padding-top: 10px;
-border-top: 2px solid black;
-
     }
     
 .slideshow-container{
@@ -739,7 +741,9 @@ border-top: 2px solid black;
 }
 
 .descr{
-/*order: 2;*/
+    display: flex;
+    /* order: 2; */
+    justify-content: center;
 }
 
 .img_prod{
@@ -805,9 +809,11 @@ display: none;
 }
 
 .add-prod{
-border-top: 2px solid black;
-border-bottom: 2px solid black;
-padding: 10px 0 15px 0;
+    border-top: 2px solid #db2725;
+    border-bottom: 2px solid #db2725;
+    padding: 10px 0 15px 0;
+    background-color: #db2725;
+    border-radius: 999px;
 }
 
 .freshdesktop{
