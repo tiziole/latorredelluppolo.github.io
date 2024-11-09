@@ -556,6 +556,10 @@ text-decoration: none;
     color: #000000; 
 } 
 
+a .shop-link{
+    color:#db2725;
+    text-decoration: underline;
+}
 
 a:visited{
 text-decoration: none;
@@ -622,7 +626,14 @@ cursor: pointer;
     color: #db2725;
     transition: all 200ms ease-in-out;
 }
+.shop-link:hover{
+    color: black;
+    transition: all 200ms ease-in-out;
 }
+
+}
+
+
 
 /*******SLIDESHOW********/
 
@@ -1276,7 +1287,7 @@ padding:0;
 .h1{
 font-size: 205px;
 }
-
+  
 .h2{
 font-size: 120px;
 }
