@@ -168,6 +168,11 @@ margin: 0px !important;
     padding: 0px;
 }
 
+a > .shop-link{
+    color:#db2725;
+    text-decoration: underline;
+}
+
 label{
     font-weight: 400;
     margin: 0 !important;
@@ -628,7 +633,7 @@ cursor: pointer;
 }
 .shop-link:hover{
     color: black;
-    transition: all 200ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 
 }
