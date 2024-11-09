@@ -634,6 +634,7 @@ cursor: pointer;
 .shop-link:hover{
     color: black;
     transition: all 400ms ease-in-out;
+    text-decoration: underline;
 }
 
 }
