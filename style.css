@@ -556,7 +556,7 @@ text-decoration: none;
     color: #000000; 
 } 
 
-a .shop-link{
+.shop-link:link{
     color:#db2725;
     text-decoration: underline;
 }
