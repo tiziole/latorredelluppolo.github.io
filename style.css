@@ -168,7 +168,7 @@ margin: 0px !important;
     padding: 0px;
 }
 
-a > .discl-shop{
+.discl-shop > a {
     color:#db2725;
     text-decoration: underline;
 }
