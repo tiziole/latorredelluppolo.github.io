@@ -561,11 +561,6 @@ text-decoration: none;
     color: #000000; 
 } 
 
-.shop-link{
-    color:#db2725;
-    text-decoration: underline;
-}
-
 .shop-link:link{
     color:#db2725;
     text-decoration: underline;
@@ -584,7 +579,11 @@ text-decoration: none;
  .pointlink:visited { 
     text-decoration: none;
     color: #000000; 
-}  
+} 
+
+.shop-link:visited{
+    color:#db2725;
+    text-decoration: underline;
 
 .link:active { 
     text-decoration: none;
