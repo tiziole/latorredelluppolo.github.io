@@ -71,6 +71,30 @@
 
 <link rel="stylesheet" href="https://use.typekit.net/fqw5jgq.css">
 
+<style>
+    #custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+#custom-alert.show {
+    opacity: 1;
+}
+
+#custom-alert.hidden {
+    display: none;
+}
+
+</style>
 
 <header id="header" class="p-t p-b">
 <a href="https://vqui.it/w/hXlTJGRp">
@@ -194,7 +218,8 @@
 </header>
     
 <div class="p-r p-l flow">
-    
+        <!---Alert custom-->    <div id="custom-alert" class="hidden">Text copied to clipboard!</div>
+
 <!---SLIDESHOW-->
 <div class="total-cont">
         
