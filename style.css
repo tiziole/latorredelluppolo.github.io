@@ -584,6 +584,7 @@ text-decoration: none;
 .shop-link:visited{
     color:#db2725;
     text-decoration: underline;
+}
 
 .link:active { 
     text-decoration: none;
