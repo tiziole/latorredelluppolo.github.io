@@ -561,6 +561,11 @@ text-decoration: none;
     color: #000000; 
 } 
 
+.shop-link{
+    color:#db2725;
+    text-decoration: underline;
+}
+
 .shop-link:link{
     color:#db2725;
     text-decoration: underline;
@@ -636,6 +641,7 @@ cursor: pointer;
     color: #db2725;
     transition: all 200ms ease-in-out;
 }
+
 .shop-link:hover{
     color: black;
     transition: all 400ms ease-in-out;
