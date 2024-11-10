@@ -596,6 +596,11 @@ text-decoration: none;
     color: #f8f6ef; 
 }
 
+.shop-link:active{
+    color:#db2725;
+    text-decoration: underline;
+}
+
 
 @media (hover: hover) {
     a:hover{
