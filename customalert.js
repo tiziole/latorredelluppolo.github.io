@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll('a.tocopy').forEach(anchor => {
         anchor.addEventListener('click', function (event) {
-            event.preventDefault();
+            event.preventDefault();  // Prevent any default link behavior
 
             const textToCopy = anchor.textContent;
 
