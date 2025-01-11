@@ -916,6 +916,19 @@ display: none;
     text-rendering: geometricPrecision;
 }
 
+.card-text-top2 {
+    position: relative;
+    font-family: rama-gothic-m;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 90%;
+    color: #000000;
+    width: 58.3333333333%;
+    float: left;
+    z-index: 1;
+    text-rendering: geometricPrecision;
+}
+
 .card-text-bottom {
     position: relative;
     font-family: rama-gothic-m;
