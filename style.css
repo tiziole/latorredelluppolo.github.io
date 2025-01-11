@@ -898,6 +898,11 @@ display: none;
     overflow: hidden; /* Forza il contenitore a contenere i float */
 }
 
+.card2 {
+    position: absolute;
+    overflow: hidden; /* Forza il contenitore a contenere i float */
+}
+
 .card-text-top {
     position: relative;
     font-family: rama-gothic-m;
