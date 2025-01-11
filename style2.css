@@ -918,15 +918,16 @@ display: none;
     font-size: 140px;
     line-height: 60%;
     color: #000000;
-    float: left;
     text-align: right !important;
-    width: 41.6666666667%;
     z-index: 1;
     text-rendering: geometricPrecision;
 }
 
 .card-image {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
 }
 
 .card-text-bottom::first-line {
