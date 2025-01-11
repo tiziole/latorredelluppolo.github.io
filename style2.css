@@ -925,9 +925,9 @@ display: none;
 
 .card-image {
     
-    transform: translateX(-50%);
+    transform: translateX(50%);
     display: block;
-}
+} 
 
 .card-text-bottom::first-line {
     line-height: 80%; /* Reset line-height for the first line */
