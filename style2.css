@@ -911,6 +911,7 @@ display: none;
     line-height: 90%;
     color: #000000;
     width: 100%;
+    text-align: center !important;
     /*float: left;
     z-index: 1;*/
     text-rendering: geometricPrecision;
@@ -924,7 +925,7 @@ display: none;
     line-height: 60%;
     color: #000000;
     /*float: left;*/
-    /*text-align: right !important;*/
+    text-align: center !important;
     width: 100%;
     /*z-index: 1;*/
     text-rendering: geometricPrecision;
@@ -932,7 +933,7 @@ display: none;
 
 .card-image {
     
-    width: 90%;
+    width: 100%;
     
     top: 35px; 
     /*
