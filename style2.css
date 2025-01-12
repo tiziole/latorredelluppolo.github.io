@@ -899,7 +899,7 @@ display: none;
 }
 
 .card {
-    
+    position: relative;
     overflow: hidden; /* Forza il contenitore a contenere i float */
 }
 
@@ -910,8 +910,8 @@ display: none;
     font-size: 70px;
     line-height: 90%;
     color: #000000;
-
-
+    width: 70%;
+    float: left;
     z-index: 1;
     text-rendering: geometricPrecision;
 }
@@ -923,14 +923,21 @@ display: none;
     font-size: 140px;
     line-height: 60%;
     color: #000000;
+    float: left;
     text-align: right !important;
+    width: 30%;
     z-index: 1;
     text-rendering: geometricPrecision;
 }
 
 .card-image {
-    
+    position: absolute;
+    width: 90%;
+    /* top: 35px; */
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
+    z-index: 0;
 } 
 
 .card-text-bottom::first-line {
