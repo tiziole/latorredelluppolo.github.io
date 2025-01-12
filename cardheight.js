@@ -7,7 +7,7 @@
 
             if (!image.complete) {
                 image.onload = function() {
-                    ;
+                    calculateHeight(card, image);
                 };
             } else {
                 calculateHeight(card, image);
