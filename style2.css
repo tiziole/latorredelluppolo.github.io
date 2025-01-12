@@ -931,12 +931,12 @@ display: none;
 }
 
 .card-image {
-    
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
     /* position: absolute;
     top: 35px; 
-    left: 50%;
-    transform: translateX(-50%);
+    
     display: block;
     z-index: 0;*/
 } 
