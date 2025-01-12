@@ -895,7 +895,7 @@ display: none;
 
 .p-r-card {
     margin: 15px 0px;
-    padding: 0 15px;
+    padding: 0;
 }
 
 .card {
@@ -910,7 +910,7 @@ display: none;
     font-size: 70px;
     line-height: 90%;
     color: #000000;
-    width: 70%;
+    width: 100%;
     float: left;
     z-index: 1;
     text-rendering: geometricPrecision;
@@ -925,7 +925,7 @@ display: none;
     color: #000000;
     float: left;
     text-align: right !important;
-    width: 30%;
+    width: 100%;
     z-index: 1;
     text-rendering: geometricPrecision;
 }
