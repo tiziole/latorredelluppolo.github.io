@@ -933,9 +933,10 @@ display: none;
 .card-image {
     
     width: 90%;
-    position: absolute;
+    
     top: 35px; 
     /*
+    position: absolute;
     display: block;
     z-index: 0;*/
 } 
