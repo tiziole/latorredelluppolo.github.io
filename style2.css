@@ -934,9 +934,9 @@ display: none;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    /* position: absolute;
+    position: absolute;
     top: 35px; 
-    
+    /*
     display: block;
     z-index: 0;*/
 } 
