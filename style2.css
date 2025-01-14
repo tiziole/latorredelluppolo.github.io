@@ -901,6 +901,7 @@ display: none;
 .card {
     position: relative;
     overflow: hidden; /* Forza il contenitore a contenere i float */
+    background-color: lightblue;
 }
 
 .card-text-top {
@@ -936,7 +937,7 @@ display: none;
 }
 
 .card-image {
-    
+    background-color: olive;
     width: 90%;
     left: 50%;
     transform: translateX(-50%);

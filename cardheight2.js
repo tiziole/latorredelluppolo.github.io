@@ -16,7 +16,7 @@
     }
 
     function calculateHeight(card, image) {
-        var imageTop =0;
+        var imageTop =15;
 
 
         var imageWidth = card.offsetWidth * 0.9; 
