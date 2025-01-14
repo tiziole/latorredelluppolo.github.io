@@ -17,7 +17,7 @@ function setParallaxEffect() {
                 parallax = Math.max(endTop, Math.min(startTop, parallax));
 
                 // Applica il movimento parallax all'immagine
-                image.style.transform = `translate(50%, ${parallax}px)`;
+                image.style.transform = `translate(-50%, ${parallax}px)`;
             }
         });
     }

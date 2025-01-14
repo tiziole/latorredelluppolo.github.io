@@ -937,10 +937,10 @@ display: none;
     top: 35px; 
     left: 50%;
     transform: translateX(-50%);
-    /*
+    
     position: absolute;
     display: block;
-    z-index: 0;*/
+    z-index: 0;
 } 
 
 .card-text-bottom::first-line {
