@@ -1,8 +1,8 @@
 function setParallaxEffect() {
         var cards = document.querySelectorAll('.card');
         var windowHeight = window.innerHeight;
-        var startTop = 10; // Valore iniziale di top
-        var endTop = -20; // Valore finale di top
+        var startTop = 15; // Valore iniziale di top
+        var endTop = -15; // Valore finale di top
 
         cards.forEach(function(card) {
             var image = card.querySelector('.card-image');
