@@ -901,7 +901,6 @@ display: none;
 .card {
     position: relative;
     overflow: hidden; /* Forza il contenitore a contenere i float */
-    background-color: lightblue;
 }
 
 .card-text-top {
@@ -937,7 +936,6 @@ display: none;
 }
 
 .card-image {
-    background-color: olive;
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
@@ -1112,18 +1110,24 @@ font-family: BDOGroteskRegular;
 /********************************/
 
 /*****************CARD******************/
-    p-r-card{
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 3 columns for large screens */
+        gap: 20px; /* Adjusts the space between products */
+    }
+
+    .p-r-card{
         margin: 10px 0;
         padding: 0 8px;
     }
 
     .card-text-top {
-        font-size:30px;
-        margin: 0px;
+        font-size:35px;
+        
     }
 
     .card-text-bottom {
-        font-size: 100px;
+        font-size: 35px;
     }
 /*********************************************/
 
@@ -1244,18 +1248,25 @@ padding-bottom: 10px;
 
 
 /*****************CARD******************/
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns for large screens */
+    gap: 20px; /* Adjusts the space between products */
+}
+
 .p-r-card {
 margin: 10px 0;
 padding: 0 8px;
 }
 
 .card-text-top {
-font-size:30px;
-margin: 0px;
+font-size:35px;
+
 }
 
 .card-text-bottom {
-font-size: 100px;
+font-size: 35px;
 }
 /*********************************************/
 
@@ -1441,6 +1452,13 @@ padding-bottom: 25px;
 /*******************************/
 
 /*****************CARD******************/
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 columns for large screens */
+    gap: 20px; /* Adjusts the space between products */
+}
+
 .p-r-card{
 margin: 10px 0;
 padding: 0;
@@ -1448,11 +1466,11 @@ padding: 0;
 
 .card-text-top {
 font-size:30px;
-margin: 0px;
+
 }
 
 .card-text-bottom {
-font-size: 100px;
+font-size: 30px;
 }
 /*********************************************/
 
@@ -1597,6 +1615,12 @@ z-index: 10;
 }
 
 /*****************CARD******************/
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 columns for large screens */
+    gap: 20px; /* Adjusts the space between products */
+}
+
 .p-r-card{
 margin: 10px 0;
 padding: 0;
@@ -1604,11 +1628,11 @@ padding: 0;
 
 .card-text-top {
 font-size:30px;
-margin: 0px;
+
 }
 
 .card-text-bottom {
-font-size: 100px;
+font-size: 30px;
 }
 /*********************************************/
 }
@@ -1745,6 +1769,12 @@ padding: 10px 0 15px 0;
 }
 
 /*****************CARD******************/
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 3 columns for large screens */
+    gap: 20px; /* Adjusts the space between products */
+}
+
 .p-r-card{
 margin: 10px 0;
 padding: 0;
@@ -1752,11 +1782,11 @@ padding: 0;
 
 .card-text-top {
 font-size:30px;
-margin: 0px;
+
 }
 
 .card-text-bottom {
-font-size: 70px;
+font-size: 30px;
 }
 /*********************************************/
 
