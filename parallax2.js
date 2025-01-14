@@ -11,7 +11,7 @@ function setParallaxEffect() {
             // Se la card è visibile nella viewport
             if (rect.top <= windowHeight && rect.bottom >= 0) {
                 var distanceFromCenter = windowHeight / 2 - rect.top; // Distanza dalla metà della viewport
-                var parallax = startTop - (distanceFromCenter * 0.1); // Calcola il movimento parallax
+                var parallax = startTop - (distanceFromCenter * 0.15); // Calcola il movimento parallax
 
                 // Assicurati che il valore parallax non superi il range specificato
                 parallax = Math.max(endTop, Math.min(startTop, parallax));
