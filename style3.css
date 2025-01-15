@@ -1106,7 +1106,7 @@ font-family: BDOGroteskRegular;
     }
 
     .card-text-top {
-        font-size:30px;
+        font-size:58px;
         margin: 0px;
     }
 
@@ -1238,12 +1238,12 @@ padding: 0;
 }
 
 .card-text-top {
-font-size:30px;
+font-size:35px;
 margin: 0px;
 }
 
 .card-text-bottom {
-font-size: 100px;
+font-size: 35px;
 }
 /*********************************************/
 
@@ -1440,7 +1440,7 @@ margin: 0px;
 }
 
 .card-text-bottom {
-font-size: 100px;
+font-size: 30px;
 }
 /*********************************************/
 
@@ -1596,7 +1596,7 @@ margin: 0px;
 }
 
 .card-text-bottom {
-font-size: 100px;
+font-size: 30px;
 }
 /*********************************************/
 }
