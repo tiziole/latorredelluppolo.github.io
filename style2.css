@@ -907,7 +907,7 @@ display: none;
 .prize{
    
     position:absolute;
-    bottom: 0;
+    top: 83%;
     width: 100%;
 }
 
