@@ -903,6 +903,12 @@ display: none;
     overflow: hidden; /* Forza il contenitore a contenere i float */
 }
 
+.prize{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .card-text-top {
     font-family: rama-gothic-m;
     font-weight: 700;
@@ -917,6 +923,8 @@ display: none;
     align-items: center;
     text-align: center !important;
     text-rendering: geometricPrecision;
+    position: relative;
+    z-index:1;
 }
 
 .card-text-bottom {
@@ -933,6 +941,8 @@ display: none;
     align-items: center;
     text-align: center !important;
     text-rendering: geometricPrecision;
+    position: relative;
+    z-index:1;
 }
 
 .card-image {
