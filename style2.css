@@ -899,13 +899,13 @@ display: none;
 }
 
 .card {
-    background-color: coral;
+    
     position: relative;
     overflow: hidden; /* Forza il contenitore a contenere i float */
 }
 
 .prize{
-    background-color: olive;
+   
     position:absolute;
     bottom: 0;
     width: 100%;
@@ -948,7 +948,7 @@ display: none;
 }
 
 .card-image {
-    background-color: aquamarine;
+    
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
