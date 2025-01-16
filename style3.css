@@ -895,14 +895,14 @@ display: none;
 
 .card {
     position: relative;
-    overflow: hidden; /* Forza il contenitore a contenere i float */
+    /*overflow: hidden;Forza il contenitore a contenere i float */
 }
 
 .card-text-top {
     position: relative;
     font-family: rama-gothic-m;
     font-weight: 700;
-    font-size: 58px;
+    font-size: 93px;
     line-height: 90%;
     color: #000000;
     float: left;
@@ -915,7 +915,7 @@ display: none;
     position: relative;
     font-family: rama-gothic-m;
     font-weight: 700;
-    font-size: 140px;
+    font-size: 93px;
     line-height: 60%;
     color: #000000;
     float: left;
@@ -1111,7 +1111,7 @@ font-family: BDOGroteskRegular;
     }
 
     .card-text-bottom {
-        font-size: 100px;
+        font-size: 58px;
     }
 /*********************************************/
 
@@ -1238,12 +1238,12 @@ padding: 0;
 }
 
 .card-text-top {
-font-size:35px;
+font-size:40px;
 margin: 0px;
 }
 
 .card-text-bottom {
-font-size: 35px;
+font-size: 40px;
 }
 /*********************************************/
 
