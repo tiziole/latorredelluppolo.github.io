@@ -905,8 +905,8 @@ display: none;
 }
 
 .prize{
-    position:absolute;
-    bottom: 0;
+    /*position:absolute;
+    bottom: 0;*/
     width: 100%;
 }
 
@@ -951,7 +951,7 @@ display: none;
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
-    position: absolute;
+    position: relative;
     display: block;
     z-index: 0;
 } 
@@ -1135,11 +1135,12 @@ font-family: BDOGroteskRegular;
 
     .card-text-top {
         font-size:35px;
-        
+        width: 100%
     }
 
     .card-text-bottom {
         font-size: 35px;
+        width: 100%;
     }
 /*********************************************/
 
@@ -1274,11 +1275,12 @@ padding: 0 8px;
 
 .card-text-top {
 font-size:35px;
-
+width:100%;
 }
 
 .card-text-bottom {
 font-size: 35px;
+width:100%;
 }
 /*********************************************/
 
@@ -1479,11 +1481,13 @@ padding: 0;
 
 .card-text-top {
 font-size:30px;
+width:100%;
 
 }
 
 .card-text-bottom {
 font-size: 30px;
+width:100%;
 }
 /*********************************************/
 
@@ -1641,11 +1645,12 @@ padding: 0;
 
 .card-text-top {
 font-size:30px;
-
+width:100%;
 }
 
 .card-text-bottom {
 font-size: 30px;
+width:100%;
 }
 /*********************************************/
 }
@@ -1795,11 +1800,12 @@ padding: 0;
 
 .card-text-top {
 font-size:30px;
-
+width:100%;
 }
 
 .card-text-bottom {
 font-size: 30px;
+width:100%;
 }
 /*********************************************/
 
