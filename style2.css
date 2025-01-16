@@ -1268,7 +1268,7 @@ padding-bottom: 10px;
     gap: 25px; /* Adjusts the space between products */
 }
 .prize {
-    top: 80%;
+    top: 70%;
 }
 
 .p-r-card {
@@ -1468,6 +1468,9 @@ padding-bottom: 25px;
 /*******************************/
 
 /*****************CARD******************/
+.prize {
+    top: 80%;
+}
 
 .card-container{
     display: grid;
