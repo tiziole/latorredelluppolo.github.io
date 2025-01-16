@@ -891,11 +891,21 @@ display: none;
 .p-r-card {
     margin: 15px 0px;
     padding: 0 ;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
 }
-
+.prize {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
 .card {
     position: relative;
     /*overflow: hidden;Forza il contenitore a contenere i float */
+    
 }
 
 .card-text-top {
@@ -932,6 +942,7 @@ display: none;
     transform: translateX(-50%);
     display: block;
     z-index: 0;
+    
 }
 
 .card-text-bottom::first-line {
@@ -1430,17 +1441,32 @@ padding-bottom: 25px;
 
 /*****************CARD******************/
 .p-r-card{
-margin: 20px 0;
-padding: 0;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.prize {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.p-r-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }
 
 .card-text-top {
-font-size:30px;
+font-size:50px;
 margin: 0px;
 }
 
 .card-text-bottom {
-font-size: 30px;
+font-size: 50px;
 }
 /*********************************************/
 
@@ -1591,12 +1617,12 @@ padding: 0;
 }
 
 .card-text-top {
-font-size:30px;
-margin: 0px;
-}
-
+    font-size:50px;
+    margin: 0px;
+    }
+    
 .card-text-bottom {
-font-size: 30px;
+    font-size: 50px;
 }
 /*********************************************/
 }
@@ -1744,12 +1770,7 @@ margin: 0px;
 }
 
 .card-text-bottom {
-font-size: 70px;
+font-size: 30px;
 }
-/*********************************************/
 
 }
-/************************************************/
-
-    
-    

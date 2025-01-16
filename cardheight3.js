@@ -1,7 +1,7 @@
 //SET HEIGHT OF CARDS
 
 function setCardHeight() {
-    var cards = document.querySelectorAll('.p-r-card');
+    var cards = document.querySelectorAll('.card');
     cards.forEach(function(card) {
         var image = card.querySelector('.card-image');
 
