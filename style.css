@@ -944,6 +944,18 @@ display: none;
     line-height: 80%; /* Reset line-height for the first line */
         }
 
+
+.footer-tower{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.footer-col{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;   
+}
 /***********************************************/
 
 
